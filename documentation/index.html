@@ -1,92 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head lang="en">
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <title>Runok || Template Documentation</title>
+  <head lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>AngularSlant || Template Documentation</title>
     <!-- Framework CSS -->
-    <link rel="stylesheet" href="assets/blueprint-css/screen.css">
-    <link rel="stylesheet" href="assets/blueprint-css/print.css" media="print">
+    <link rel="stylesheet" href="assets/blueprint-css/screen.css" />
+    <link
+      rel="stylesheet"
+      href="assets/blueprint-css/print.css"
+      media="print"
+    />
     <!--[if lt IE 8]><link href="assets/blueprint-css/ie.css" type="text/css"<![endif]-->
-    <link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css">
+    <link
+      rel="stylesheet"
+      href="assets/blueprint-css/plugins/fancy-type/screen.css"
+    />
     <style>
-        p,
-        table,
-        hr,
-        .box {
-            margin-bottom: 25px;
-        }
+      p,
+      table,
+      hr,
+      .box {
+        margin-bottom: 25px;
+      }
 
-        .box p {
-            margin-bottom: 10px;
-        }
+      .box p {
+        margin-bottom: 10px;
+      }
 
-        .added1 {
-            background-color: #336600;
-            color: #FFFFFF;
-        }
-
+      .added1 {
+        background-color: #336600;
+        color: #ffffff;
+      }
     </style>
 
     <!-- Syntax Highlighter -->
-    <link rel="stylesheet" href="syntax-highlighter/styles/shCore.css" media="all">
-    <link rel="stylesheet" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
-</head>
+    <link
+      rel="stylesheet"
+      href="syntax-highlighter/styles/shCore.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="syntax-highlighter/styles/shThemeDefault.css"
+      media="all"
+    />
+  </head>
 
-
-<body>
+  <body>
     <div class="container">
+      <h3 class="center alt">
+        &ldquo;AngularSlant&rdquo; Documentation by &ldquo;RRDevs&rdquo; v1.0
+      </h3>
 
-        <h3 class="center alt">&ldquo;Runok&rdquo; Documentation by &ldquo;RRDevs&rdquo; v1.0</h3>
+      <hr />
 
-        <hr>
+      <h1 class="center">&ldquo;AngularSlant&rdquo;</h1>
 
-        <h1 class="center">&ldquo;Runok&rdquo;</h1>
+      <div class="borderTop">
+        <div class="span-6 colborder info prepend-1">
+          <p class="prepend-top">
+            <strong>
+              Created:07/02/2024<br />
+              By:
+              <a href="https://themeforest.net/user/rrdevs" target="_blank"
+                >RRDevs</a
+              ><br />
+              <br /> </strong
+            ><strong><br /> </strong>
+          </p>
+        </div>
+        <!-- end div .span-6 -->
 
-        <div class="borderTop">
-            <div class="span-6 colborder info prepend-1">
-                <p class="prepend-top">
-                    <strong>
-                        Created:07/02/2024<br>
-                        By: <a href="https://themeforest.net/user/rrdevs" target="_blank">RRDevs</a><br>
-                        <br>
-                    </strong><strong><br>
-                    </strong>
-                </p>
-            </div><!-- end div .span-6 -->
+        <div class="span-12 last">
+          <p class="prepend-top append-0">
+            Thank you for purchasing our template. If you have any questions
+            that are beyond the scope of this help file, please contact our
+            support. Thanks so much!
+          </p>
+        </div>
+      </div>
+      <!-- end div .borderTop -->
 
-            <div class="span-12 last">
-                <p class="prepend-top append-0">Thank you for purchasing our template. If you have any questions that are beyond the scope of this help file, please contact our support. Thanks so much!</p>
-            </div>
-        </div><!-- end div .borderTop -->
+      <hr />
 
-        <hr>
+      <h2 id="toc" class="alt">Table of Contents</h2>
+      <ol class="alpha">
+        <li><a href="#htmlStructure">HTML Structure</a></li>
+        <li><a href="#temp-components">Template Components</a></li>
+        <li><a href="#cssFiles">CSS Files and Structure</a></li>
+        <li><a href="#javascript">JavaScript</a></li>
+        <li><a href="#credits">Sources and Credits</a></li>
 
-        <h2 id="toc" class="alt">Table of Contents</h2>
-        <ol class="alpha">
-            <li><a href="#htmlStructure">HTML Structure</a></li>
-            <li><a href="#temp-components">Template Components</a></li>
-            <li><a href="#cssFiles">CSS Files and Structure</a></li>
-            <li><a href="#javascript">JavaScript</a></li>
-            <li><a href="#credits">Sources and Credits</a></li>
+        <li>
+          <a href="#php">PHP Code Explanation</a>
+          <em class="quiet small">(If your template uses PHP)</em>
+        </li>
+        <li>
+          <a href="#">Flash</a>
+          <em class="quiet small">(If your template uses Flash)</em>
+        </li>
+        <li>
+          <a href="#">API Usage</a>
+          <em class="quiet small">(If your template uses an API)</em>
+        </li>
+        <li>
+          <a href="#">Any additional unique features that need an overview</a>
+        </li>
+      </ol>
 
-            <li><a href="#php">PHP Code Explanation</a> <em class="quiet small">(If your template uses PHP)</em></li>
-            <li><a href="#">Flash</a> <em class="quiet small">(If your template uses Flash)</em></li>
-            <li><a href="#">API Usage</a> <em class="quiet small">(If your template uses an API)</em></li>
-            <li><a href="#">Any additional unique features that need an overview</a></li>
-        </ol>
+      <hr />
 
-        <hr>
+      <h3 id="htmlStructure">
+        <strong>A) HTML Structure</strong> - <a href="#toc">top</a>
+      </h3>
+      <p>Below is the general HTML structure of the landing page.<br /></p>
 
-        <h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
-        <p>Below is the general HTML structure of the landing page.<br>
-        </p>
+      <h4 id="front-html-structures">
+        <strong>1) index.html File Structure</strong> - <a href="#toc">top</a>
+      </h4>
 
-        <h4 id="front-html-structures"><strong>1) index.html File Structure</strong> - <a href="#toc">top</a></h4>
+      <p>
+        The template page's layout consist of top that show the logo and main
+        menu, hero section that show background image, before content that show
+        some amaizing content, about section contain about your some info &
+        feature, service section contained all services, portfolio with awesome
+        animation, skills section here you can add some skills, team section is
+        for your team members, testimonial section here you can published your
+        customer reviews, call to action this for call to action content,
+        contact section here you can put your contact information & footer that
+        show copyright information.
+      </p>
 
-        <p>The template page's layout consist of top that show the logo and main menu, hero section that show background image, before content that show some amaizing content, about section contain about your some info & feature, service section contained all services, portfolio with awesome animation, skills section here you can add some skills, team section is for your team members, testimonial section here you can published your customer reviews, call to action this for call to action content, contact section here you can put your contact information & footer that show copyright information.</p>
-
-        <pre class="brush: html;" id="front-html-structure-pre">
+      <pre class="brush: html;" id="front-html-structure-pre">
 &lt;!DOCTYPE html>
 &lt;html class="no-js" lang="en">
     &lt;head>
@@ -96,7 +141,7 @@
         &lt;meta name="description" content="">
 
         &lt;!-- Site Title -->
-        &lt;title>Runok - Web Agency Template&lt;/title>
+        &lt;title>AngularSlant - Web Agency Template&lt;/title>
 
         &lt;!-- Place favicon.ico in the root directory -->
         &lt;link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -119,7 +164,7 @@
     &lt;![endif]-->
     
 	   &lt;div id="preloader">
-            &lt;div class="loading" data-loading-text="Runok">&lt;/div>
+            &lt;div class="loading" data-loading-text="AngularSlant">&lt;/div>
         &lt;/div>
         &lt;!-- ./ preloader -->
         
@@ -211,17 +256,23 @@
         &lt;script src="assets/js/main.js">&lt;/script>
     &lt;/body>
 &lt;/html>
-        </pre>
-        <hr>
+        </pre
+      >
+      <hr />
 
+      <h3 id="temp-components">
+        <strong>B) Template Components</strong> - <a href="#toc">top</a>
+      </h3>
+      <p>
+        The site is made of many sections like header, slider, testimonials,
+        services and more...
+      </p>
 
-        <h3 id="temp-components"><strong>B) Template Components</strong> - <a href="#toc">top</a></h3>
-        <p>The site is made of many sections like header, slider, testimonials, services and more...</p>
+      <h4 id="header">
+        <strong>1) Header Section</strong> - <a href="#toc">top</a>
+      </h4>
 
-        <h4 id="header"><strong>1) Header Section</strong> - <a href="#toc">top</a></h4>
-
-
-        <pre class="brush: html;">
+      <pre class="brush: html;">
 	&lt;header class="header sticky-active">
 	&lt;div class="primary-header">
 		&lt;div class="primary-header-inner">
@@ -269,13 +320,15 @@
 	&lt;/div>
 &lt;/header>
 &lt;!-- /.Main Header -->
-</pre>
+</pre
+      >
 
-
-        <hr>
-        <h4 id="slider"><strong>2) Hero Section</strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <hr />
+      <h4 id="slider">
+        <strong>2) Hero Section</strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;section class="hero-section">
             &lt;div class="hero-bg-shape">&lt;img src="assets/img/bg-img/hero-bg-shape.png" alt="shape">&lt;/div>
             &lt;div class="hero-shape">&lt;img src="assets/img/shapes/hero-shape-1.png" alt="shape">&lt;/div>
@@ -294,13 +347,16 @@
         &lt;/section>
         &lt;!-- ./ hero-section -->
 	
-</pre>
+</pre
+      >
 
-        <hr>
+      <hr />
 
-        <h4 id="services"><strong>3) Process Section</strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="services">
+        <strong>3) Process Section</strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;section class="process-section pt-130 fade-wrapper">
             &lt;div class="bg-shape">&lt;img src="assets/img/shapes/process-shape.png" alt="shape">&lt;/div>
             &lt;div class="container">
@@ -328,15 +384,18 @@
             &lt;/div>
         &lt;/section>
         &lt;!-- ./ process-section -->
-</pre>
+</pre
+      >
 
-        <br>
+      <br />
 
-        <hr>
+      <hr />
 
-        <h4 id="about"><strong>4) About Section</strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="about">
+        <strong>4) About Section</strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;section class="about-section pb-130">
             &lt;div class="round-shape">&lt;img src="assets/img/shapes/round-shape.png" alt="shape">&lt;/div>
             &lt;div class="about-wrap">
@@ -368,15 +427,18 @@
             &lt;/div>
         &lt;/section>
         &lt;!-- ./ about-section -->
-</pre>
+</pre
+      >
 
-        <br>
+      <br />
 
-        <hr>
+      <hr />
 
-        <h4 id="case-study"><strong>5) Service Section</strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="case-study">
+        <strong>5) Service Section</strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 			&lt;section class="service-section pb-130 fade-wrapper">
             &lt;div class="shape">&lt;img src="assets/img/shapes/service-shape-1.png" alt="shape">&lt;/div>
             &lt;div class="bg-color">&lt;/div>
@@ -407,15 +469,18 @@
             &lt;/div>
         &lt;/section>
         &lt;!-- ./ service-section -->
-</pre>
+</pre
+      >
 
-        <br>
+      <br />
 
-        <hr>
+      <hr />
 
-        <h4 id="consult"><strong>6) Faq Section</strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="consult">
+        <strong>6) Faq Section</strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;section class="faq-section pt-130 pb-130">
         &lt;div class="faq-shape">&lt;img src="assets/img/shapes/faq-shape-1.png" alt="shape">&lt;/div>
         &lt;div class="faq-top-shape">&lt;/div>
@@ -452,15 +517,18 @@
         &lt;/div>
     &lt;/section>
     &lt;!-- ./ faq-section -->
-</pre>
+</pre
+      >
 
-        <br>
+      <br />
 
-        <hr>
+      <hr />
 
-        <h4 id="testimonial"><strong>7) Running Text</strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="testimonial">
+        <strong>7) Running Text</strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;div class="running-text testi">
             &lt;div class="container">
                 &lt;div class="scroller" data-speed="fast">
@@ -472,15 +540,18 @@
             &lt;/div>
         &lt;/div>
         &lt;!-- ./ running-text -->
-</pre>
+</pre
+      >
 
-        <br>
+      <br />
 
-        <hr>
+      <hr />
 
-        <h4 id="blog"><strong>8) Testimonial Section</strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="blog">
+        <strong>8) Testimonial Section</strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;section class="testimonial-section overflow-hidden">
             &lt;div class="container">
                 &lt;div class="testi-carousel swiper">
@@ -502,13 +573,16 @@
             &lt;/div>
         &lt;/section>
         &lt;!-- ./ testimonial-section -->
-</pre>
+</pre
+      >
 
-        <hr>
+      <hr />
 
-        <h4 id="sponsor"><strong>10) Project Section </strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="sponsor">
+        <strong>10) Project Section </strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;section class="project-section pt-130 pb-130">
             &lt;div class="container">
                 &lt;div class="project-top heading-space align-items-end">
@@ -553,13 +627,16 @@
             &lt;/div>
         &lt;/section>
         &lt;!-- ./ project-section -->
-</pre>
+</pre
+      >
 
-        <hr>
+      <hr />
 
-        <h4 id="widget"><strong>11) Running Text </strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="widget">
+        <strong>11) Running Text </strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;div class="running-text running-1">
             &lt;div class="container">
                 &lt;div class="scroller" data-speed="fast">
@@ -570,13 +647,16 @@
             &lt;/div>
         &lt;/div>
         &lt;!-- ./ running-text -->
-</pre>
+</pre
+      >
 
-        <hr>
+      <hr />
 
-        <h4 id="widget"><strong>11) Running Text </strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="widget">
+        <strong>11) Running Text </strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;div class="running-text running-1">
             &lt;div class="container">
                 &lt;div class="scroller" data-speed="fast">
@@ -587,13 +667,16 @@
             &lt;/div>
         &lt;/div>
         &lt;!-- ./ running-text -->
-</pre>
+</pre
+      >
 
-        <hr>
+      <hr />
 
-        <h4 id="widget"><strong>13) Blog Section</strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="widget">
+        <strong>13) Blog Section</strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 			&lt;section class="blog-section pt-130 pb-130 fade-wrapper">
                 &lt;div class="container">
                     &lt;div class="section-heading text-center">
@@ -621,14 +704,16 @@
                 &lt;/div>
             &lt;/section>
             &lt;!-- ./ blog-section -->
-</pre>
+</pre
+      >
 
-        
-        <hr>
+      <hr />
 
-        <h4 id="widget"><strong>14) Sponsor Section</strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <h4 id="widget">
+        <strong>14) Sponsor Section</strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;section class="sponsor-section pb-130">
             &lt;div class="container">
                 &lt;div class="sponsor-wrap">
@@ -642,13 +727,16 @@
             &lt;/div>
         &lt;/section>
         &lt;!-- ./ blog-section -->
-</pre>
-        
-        <hr>
+</pre
+      >
 
-        <h4 id="widget"><strong>15) Footer Section</strong> - <a href="#toc">top</a></h4>
-        <br>
-        <pre class="brush: html;">
+      <hr />
+
+      <h4 id="widget">
+        <strong>15) Footer Section</strong> - <a href="#toc">top</a>
+      </h4>
+      <br />
+      <pre class="brush: html;">
 		&lt;footer class="footer-section bg-dark-1">
             &lt;div class="shape">&lt;img src="assets/img/shapes/footer-shape.png" alt="footer">&lt;/div>
             &lt;div class="container">
@@ -711,7 +799,7 @@
                 &lt;div class="container">
                     &lt;div class="row copyright-content">
                         &lt;div class="col-md-6">
-                            &lt;p>© 2024 Runok. All Rights Reserved.&lt;/p>
+                            &lt;p>© 2024 AngularSlant. All Rights Reserved.&lt;/p>
                         &lt;/div>
                         &lt;div class="col-md-6">
                             &lt;ul class="social-list">
@@ -725,39 +813,45 @@
             &lt;/div>
         &lt;/footer>
         &lt;!-- ./ footer-section -->
-</pre>
+</pre
+      >
 
-        <br>
+      <br />
 
-        <p>&nbsp;</p>
+      <p>&nbsp;</p>
 
-        <hr>
-        <h3 id="cssFiles"><strong>C) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
-        <p>These are the css files:</p>
-        <ol>
-            <li>bootstrap.min.css</li>
-            <li>animate.min.css</li>
-            <li>fontawesome.min.css</li>
-            <li>keyframe-animation.css</li>
-            <li>odometer.min.css</li>
-            <li>swiper.min.css</li>
-            <li>nice-select.css</li>
-            <li>venobox.min.css</li>
-            <li>main.css </li>
-        </ol>
+      <hr />
+      <h3 id="cssFiles">
+        <strong>C) CSS Files and Structure</strong> - <a href="#toc">top</a>
+      </h3>
+      <p>These are the css files:</p>
+      <ol>
+        <li>bootstrap.min.css</li>
+        <li>animate.min.css</li>
+        <li>fontawesome.min.css</li>
+        <li>keyframe-animation.css</li>
+        <li>odometer.min.css</li>
+        <li>swiper.min.css</li>
+        <li>nice-select.css</li>
+        <li>venobox.min.css</li>
+        <li>main.css</li>
+      </ol>
 
+      <p>&nbsp;</p>
+      <hr />
 
-        <p>&nbsp;</p>
-        <hr>
+      <h3 id="javascript">
+        <strong>D) JavaScript</strong> - <a href="#toc">top</a>
+      </h3>
 
-        <h3 id="javascript"><strong>D) JavaScript</strong> - <a href="#toc">top</a></h3>
+      <p>This template use these Javascript files:</p>
 
-        <p>This template use these Javascript files:</p>
-
-        <ol>
-            <li>jQuery<br>
-                jQuery is a Javascript library that greatly reduces the amount of code that you must write. jQuery use these javascript files:
-                <pre>
+      <ol>
+        <li>
+          jQuery<br />
+          jQuery is a Javascript library that greatly reduces the amount of code
+          that you must write. jQuery use these javascript files:
+          <pre>
     jquary-3.6.0.min.js
     bootstrap-bundle.js
     imagesloaded-pkgd.js
@@ -775,38 +869,65 @@
     nice-select.js
     ajax-form.js
     main.js
-            </pre>
-                You can edit the contact.js files. for setting contact form
-                <br>
-                <br>
-            </li>
-        </ol>
+            </pre
+          >
+          You can edit the contact.js files. for setting contact form
+          <br />
+          <br />
+        </li>
+      </ol>
 
-        <hr>
+      <hr />
 
-        <h3 id="credits"><strong>F) Sources and Credits</strong> - <a href="#toc">top</a></h3>
-        <ol>
-            <li><a href="http://getbootstrap.com">Bootstrap v5.0.2</a></li>
-            <li><a href="https://kenwheeler.github.io/swiper/" target="_blank">Swiper Carousel</a></li>
-            <li><a href="https://wowjs.uk/" target="_blank">WOW JS</a></li>
-            <li><a href="http://veno.es/venobox/" target="_blank">VenoBox</a></li>
-            <li><a href="https://gsap.com/docs/v3/Plugins/ScrollSmoother/" target="_blank">Smooth Scroll</a></li>
-            <li><a href="https://gsap.com/docs/v3/" target="_blank">Gsap</a></li>
-            <li><a href="http://plugins.jquery.com/ajaxchimp/" target="_blank">AjaxChimp</a></li>
-        </ol>
-        <p>
+      <h3 id="credits">
+        <strong>F) Sources and Credits</strong> - <a href="#toc">top</a>
+      </h3>
+      <ol>
+        <li><a href="http://getbootstrap.com">Bootstrap v5.0.2</a></li>
+        <li>
+          <a href="https://kenwheeler.github.io/swiper/" target="_blank"
+            >Swiper Carousel</a
+          >
+        </li>
+        <li><a href="https://wowjs.uk/" target="_blank">WOW JS</a></li>
+        <li><a href="http://veno.es/venobox/" target="_blank">VenoBox</a></li>
+        <li>
+          <a
+            href="https://gsap.com/docs/v3/Plugins/ScrollSmoother/"
+            target="_blank"
+            >Smooth Scroll</a
+          >
+        </li>
+        <li><a href="https://gsap.com/docs/v3/" target="_blank">Gsap</a></li>
+        <li>
+          <a href="http://plugins.jquery.com/ajaxchimp/" target="_blank"
+            >AjaxChimp</a
+          >
+        </li>
+      </ol>
+      <p></p>
 
-            <hr>
-        <h3 id="php"><strong>G) PHP Code Explanation </strong> - <a href="#toc">top</a></h3>
-        <p>There are only one php code for contact page which is mail.php, open this file and change the email and subject on line 24 and line 27.
-            No need to edit other code unless you really want to.
-            <hr>
-        <p>Once again, thank you so much for purchasing this template. As I said at the beginning, I'd be glad to help you if you have any questions relating to this template. No guarantees, but I'll do my best to assist.</p>
+      <hr />
+      <h3 id="php">
+        <strong>G) PHP Code Explanation </strong> - <a href="#toc">top</a>
+      </h3>
+      <p>
+        There are only one php code for contact page which is mail.php, open
+        this file and change the email and subject on line 24 and line 27. No
+        need to edit other code unless you really want to.
+      </p>
 
-        <p class="append-bottom alt large"><strong>Runok</strong></p>
-        <p><a href="#toc">Go To Table of Contents</a></p>
+      <hr />
+      <p>
+        Once again, thank you so much for purchasing this template. As I said at
+        the beginning, I'd be glad to help you if you have any questions
+        relating to this template. No guarantees, but I'll do my best to assist.
+      </p>
 
-        <hr class="space">
+      <p class="append-bottom alt large"><strong>AngularSlant</strong></p>
+      <p><a href="#toc">Go To Table of Contents</a></p>
+
+      <hr class="space" />
     </div>
     <!-- end div .container -->
     <script src="syntax-highlighter/scripts/shCore.js"></script>
@@ -815,9 +936,7 @@
     <script src="syntax-highlighter/scripts/shBrushJScript.js"></script>
     <script src="syntax-highlighter/scripts/shBrushPhp.js"></script>
     <script>
-        SyntaxHighlighter.all()
-
+      SyntaxHighlighter.all();
     </script>
-</body>
-
+  </body>
 </html>
