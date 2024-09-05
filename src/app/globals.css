@@ -1,0 +1,19 @@
+@import url("/assets/css/bootstrap.min.css");
+@import url("/assets/css/fontawesome.min.css");
+@import url("/assets/css/venobox.min.css");
+@import url("/assets/css/animate.min.css");
+@import url("/assets/css/keyframe-animation.css");
+@import url("/assets/css/odometer.min.css");
+@import url("/assets/css/nice-select.css");
+@import url("/assets/css/carouselTicker.css");
+@import url("/assets/css/swiper.min.css");
+@import url("/assets/css/main.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.test {
+  height: var(--rr-fs-h1);
+  width: var(--rr-fs-h1);
+}
