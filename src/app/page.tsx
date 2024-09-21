@@ -18,7 +18,7 @@ export default function Home() {
                 <img
                   className="dark-img"
                   src="assets/img/icon/scroll.png"
-                  alt="scroll"
+                  alt="scroll"mobile-menu-items
                 />
                 <img
                   className="light-img"
