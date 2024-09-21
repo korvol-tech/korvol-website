@@ -1,6 +1,16 @@
+"use client";
+
 import { Header } from "@/components";
+import { Scripts } from "@/components/Scripts";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      console.log("Window is loaded");
+    });
+  }, []);
+
   return (
     <>
       <Header />
@@ -18,7 +28,7 @@ export default function Home() {
                 <img
                   className="dark-img"
                   src="assets/img/icon/scroll.png"
-                  alt="scroll"mobile-menu-items
+                  alt="scroll"
                 />
                 <img
                   className="light-img"
@@ -1663,6 +1673,7 @@ export default function Home() {
       </div>
 
       {/* JS here */}
+      <Scripts />
     </>
   );
 }
