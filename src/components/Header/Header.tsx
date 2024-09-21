@@ -11,12 +11,12 @@ export default function Header() {
               <a href="index.html">
                 <img
                   className="logo-dark"
-                  src="assets/img/logo/logo-2.png"
+                  src="assets/img/logo/Logo Dark 2.png"
                   alt="Logo"
                 />
                 <img
                   className="logo-light"
-                  src="assets/img/logo/logo-3.png"
+                  src="assets/img/logo/Logo Light 2.png"
                   alt="Logo"
                 />
               </a>
@@ -232,7 +232,7 @@ export default function Header() {
       {/* /.mobile-side-menu */}
       <div className="mobile-side-menu-overlay"></div>
       <div id="preloader">
-        <div className="loading" data-loading-text="Runok"></div>
+        <div className="loading" data-loading-text="Korvol"></div>
       </div>
       {/* ./ preloader */}
       <div id="sidebar-area" className="sidebar-area">
