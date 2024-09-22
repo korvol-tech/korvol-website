@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Scripts() {
-  const [scriptsLoaded, setScriptsLoaded] = useState(false);
-
   const scriptByOrder = [
     "/assets/js/vendor/jquary-3.6.0.min.js",
     "/assets/js/vendor/bootstrap-bundle.js",
@@ -26,45 +24,43 @@ export default function Scripts() {
   ];
 
   useEffect(() => {
-    if (!scriptsLoaded) {
-      const promiseChain = (src: string) => {
-        return new Promise<void>((resolve) => {
-          const script = document.createElement("script");
-          script.src = src;
-          script.async = true;
-
-          script.onload = () => {
-            resolve();
-          };
-
-          document.body.appendChild(script);
-        });
-      };
-
-      const chainPromise = scriptByOrder.reduce((chain, src) => {
-        const allScripts = document.querySelectorAll("script");
-        let isExist = false;
-
-        allScripts.forEach((script) => {
-          if (script.src === src) {
-            isExist = true;
-          }
-        });
-
-        if (isExist) {
-          return chain;
+    const promiseChain = (src: string) => {
+      return new Promise<void>((resolve) => {
+        if (document.querySelector(`script[src="${src}"]`)) {
+          resolve();
+          return;
         }
 
-        return chain.then(() => {
-          return promiseChain(src);
-        });
-      }, Promise.resolve());
+        const script = document.createElement("script");
+        script.src = src;
+        script.async = true;
 
-      chainPromise.then(() => {
-        console.log("All scripts loaded");
-        setScriptsLoaded(true);
+        script.onload = () => {
+          resolve();
+        };
+
+        document.body.appendChild(script);
       });
-    }
+    };
+
+    scriptByOrder.reduce((chain, src) => {
+      const allScripts = document.querySelectorAll("script");
+      let isExist = false;
+
+      allScripts.forEach((script) => {
+        if (script.src === src) {
+          isExist = true;
+        }
+      });
+
+      if (isExist) {
+        return chain;
+      }
+
+      return chain.then(() => {
+        return promiseChain(src);
+      });
+    }, Promise.resolve());
 
     return () => {
       const allScripts = document.querySelectorAll("script");
@@ -77,21 +73,6 @@ export default function Scripts() {
       });
     };
   }, []);
-
-  useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const $ = (window as any).$;
-    if ($) {
-      console.log("jQuery is loaded");
-      $(document).ready(function () {
-        console.log("Document is ready");
-      });
-
-      $(window).on("load", function () {
-        console.log("Window is loaded");
-      });
-    }
-  }, [scriptsLoaded]);
 
   return null;
 }
