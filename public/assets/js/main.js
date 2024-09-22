@@ -55,7 +55,11 @@
     reflectPreference();
 
     // now this script can find and listen for clicks on the control
-    document.querySelector("#theme-toogle").addEventListener("click", onClick);
+    const themeToggle = document.querySelector("#theme-toogle");
+
+    if (themeToggle) {
+      themeToggle.addEventListener("click", onClick);
+    }
   });
 
   /*======================================
@@ -164,10 +168,12 @@
 
     // Popup Sidebox
     function sideBox() {
+      console.log("sidebox");
       $("body").removeClass("open-sidebar");
       $(document).on("click", ".sidebar-trigger", function (e) {
         e.preventDefault();
         $("body").toggleClass("open-sidebar");
+        console.log($("body"));
       });
       $(document).on(
         "click",
@@ -200,9 +206,7 @@
 
     // Custom Cursor
     $("body").append('<div class="mt-cursor"></div>');
-    var cursor = $(".mt-cursor"),
-      linksCursor = $("a, .swiper-nav, button, .cursor-effect"),
-      crossCursor = $(".cross-cursor");
+    var cursor = $(".mt-cursor");
 
     $(window).on("mousemove", function (e) {
       cursor.css({

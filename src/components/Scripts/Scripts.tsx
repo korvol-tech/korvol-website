@@ -26,20 +26,41 @@ export default function Scripts() {
   useEffect(() => {
     const promiseChain = (src: string) => {
       return new Promise<void>((resolve) => {
-        if (!document.querySelector("script[src='" + src + "']")) {
-          const script = document.createElement("script");
-          script.src = src;
-          script.async = true;
-
-          script.onload = () => {
-            resolve();
-          };
-          document.body.appendChild(script);
-        } else {
+        if (document.querySelector(`script[src="${src}"]`)) {
           resolve();
+          return;
         }
+
+        const script = document.createElement("script");
+        script.src = src;
+        script.async = true;
+
+        script.onload = () => {
+          resolve();
+        };
+
+        document.body.appendChild(script);
       });
     };
+
+    scriptByOrder.reduce((chain, src) => {
+      const allScripts = document.querySelectorAll("script");
+      let isExist = false;
+
+      allScripts.forEach((script) => {
+        if (script.src === src) {
+          isExist = true;
+        }
+      });
+
+      if (isExist) {
+        return chain;
+      }
+
+      return chain.then(() => {
+        return promiseChain(src);
+      });
+    }, Promise.resolve());
 
     scriptByOrder.reduce(async (chain, src) => {
       const allScripts = document.querySelectorAll("script");
