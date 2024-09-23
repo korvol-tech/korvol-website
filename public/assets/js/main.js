@@ -65,12 +65,6 @@
   /*======================================
         Preloader activation
     ========================================*/
-  console.log(
-    "at least here",
-    $(document).on("ready", () => {
-      console.log("Page has been loaded successfully");
-    })
-  );
   $(document).ready(function () {
     console.log("Page has been loaded successfully");
     $("#preloader").delay(1000).fadeOut(500);
@@ -168,12 +162,10 @@
 
     // Popup Sidebox
     function sideBox() {
-      console.log("sidebox");
       $("body").removeClass("open-sidebar");
       $(document).on("click", ".sidebar-trigger", function (e) {
         e.preventDefault();
         $("body").toggleClass("open-sidebar");
-        console.log($("body"));
       });
       $(document).on(
         "click",
@@ -217,13 +209,17 @@
     });
 
     /* Odometer */
+    console.log($(".odometer"));
     $(".odometer").waypoint(
       function () {
         var odo = $(".odometer");
-        odo.each(function () {
-          var countNumber = $(this).attr("data-count");
-          $(this).html(countNumber);
-        });
+
+        if (odo && odo.length) {
+          odo.each(function () {
+            var countNumber = $(this).attr("data-count");
+            $(this).html(countNumber);
+          });
+        }
       },
       {
         offset: "80%",
