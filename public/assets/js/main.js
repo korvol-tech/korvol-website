@@ -166,6 +166,7 @@
       $(document).on("click", ".sidebar-trigger", function (e) {
         e.preventDefault();
         $("body").toggleClass("open-sidebar");
+        console.log("called ");
       });
       $(document).on(
         "click",
@@ -209,7 +210,7 @@
     });
 
     /* Odometer */
-    console.log($(".odometer"));
+    console.log($(".odometer"), Waypoint);
     $(".odometer").waypoint(
       function () {
         var odo = $(".odometer");

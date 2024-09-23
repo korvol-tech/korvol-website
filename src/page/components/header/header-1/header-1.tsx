@@ -1,8 +1,12 @@
-import { CSSProperties } from "react";
+import { CSSProperties, FC } from "react";
 
-export default function Header() {
+const Header1: FC = () => {
   return (
     <>
+      <div />
+      <div id="preloader">
+        <div className="loading" data-loading-text="Korvol"></div>
+      </div>
       {/* header-area-start */}
       <header className="header sticky-active">
         <div className="primary-header">
@@ -231,9 +235,7 @@ export default function Header() {
       </div>
       {/* /.mobile-side-menu */}
       <div className="mobile-side-menu-overlay"></div>
-      <div id="preloader">
-        <div className="loading" data-loading-text="Korvol"></div>
-      </div>
+
       {/* ./ preloader */}
       <div id="sidebar-area" className="sidebar-area">
         <button className="sidebar-trigger close">
@@ -343,4 +345,6 @@ export default function Header() {
       {/*/.sidebar-area*/}
     </>
   );
-}
+};
+
+export default Header1;
