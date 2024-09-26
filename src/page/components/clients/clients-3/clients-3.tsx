@@ -13,7 +13,7 @@ const Client3: FC = () => {
               <div className="sponsor-item text-center">
                 <a href="#">
                   <img
-                    src="assets/img/sponsor/sponsor-img-1.png"
+                    src="/assets/img/sponsor/sponsor-img-1.png"
                     alt="sponsor"
                   />
                 </a>
@@ -23,7 +23,7 @@ const Client3: FC = () => {
               <div className="sponsor-item text-center">
                 <a href="#">
                   <img
-                    src="assets/img/sponsor/sponsor-img-2.png"
+                    src="/assets/img/sponsor/sponsor-img-2.png"
                     alt="sponsor"
                   />
                 </a>
@@ -33,7 +33,7 @@ const Client3: FC = () => {
               <div className="sponsor-item text-center">
                 <a href="#">
                   <img
-                    src="assets/img/sponsor/sponsor-img-3.png"
+                    src="/assets/img/sponsor/sponsor-img-3.png"
                     alt="sponsor"
                   />
                 </a>
@@ -43,7 +43,7 @@ const Client3: FC = () => {
               <div className="sponsor-item text-center">
                 <a href="#">
                   <img
-                    src="assets/img/sponsor/sponsor-img-4.png"
+                    src="/assets/img/sponsor/sponsor-img-4.png"
                     alt="sponsor"
                   />
                 </a>
@@ -53,7 +53,7 @@ const Client3: FC = () => {
               <div className="sponsor-item text-center">
                 <a href="#">
                   <img
-                    src="assets/img/sponsor/sponsor-img-5.png"
+                    src="/assets/img/sponsor/sponsor-img-5.png"
                     alt="sponsor"
                   />
                 </a>
@@ -63,7 +63,7 @@ const Client3: FC = () => {
               <div className="sponsor-item text-center">
                 <a href="#">
                   <img
-                    src="assets/img/sponsor/sponsor-img-6.png"
+                    src="/assets/img/sponsor/sponsor-img-6.png"
                     alt="sponsor"
                   />
                 </a>

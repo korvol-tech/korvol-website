@@ -26,7 +26,7 @@ const Service5: FC = () => {
           <div className="col-lg-4 col-md-6">
             <div className="post-card-2 card-3 card-4 fade-top">
               <div className="post-thumb">
-                <img src="assets/img/blog/post-6.png" alt="post" />
+                <img src="/assets/img/blog/post-6.png" alt="post" />
               </div>
               <div className="post-content-wrap">
                 <div className="post-content">
@@ -51,7 +51,7 @@ const Service5: FC = () => {
           <div className="col-lg-4 col-md-6">
             <div className="post-card-2 card-3 card-4 fade-top">
               <div className="post-thumb">
-                <img src="assets/img/blog/post-7.png" alt="post" />
+                <img src="/assets/img/blog/post-7.png" alt="post" />
               </div>
               <div className="post-content-wrap">
                 <div className="post-content">
@@ -76,7 +76,7 @@ const Service5: FC = () => {
           <div className="col-lg-4 col-md-6">
             <div className="post-card-2 card-3 card-4 fade-top">
               <div className="post-thumb">
-                <img src="assets/img/blog/post-8.png" alt="post" />
+                <img src="/assets/img/blog/post-8.png" alt="post" />
               </div>
               <div className="post-content-wrap">
                 <div className="post-content">

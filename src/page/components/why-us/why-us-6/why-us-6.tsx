@@ -4,13 +4,13 @@ const WhyUs6: FC = () => {
   return (
     <section className="choose-us pt-130 pb-130 overflow-hidden">
       <div className="shape">
-        <img src="assets/img/shapes/choose-bg-shape.png" alt="bg-shape" />
+        <img src="/assets/img/shapes/choose-bg-shape.png" alt="bg-shape" />
       </div>
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
             <div className="choose-us-img reveal">
-              <img src="assets/img/images/choose-us-img.png" alt="img" />
+              <img src="/assets/img/images/choose-us-img.png" alt="img" />
             </div>
           </div>
           <div className="col-lg-6">
