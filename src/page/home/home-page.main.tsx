@@ -13,20 +13,20 @@ import { Header1 } from "../components/header";
 const HomePage: FC = () => {
   return (
     <>
-      <div id="smooth-wrapper">
-        <div className="smooth-content">
-          <Header1 />
-          <Hero1 />
-          <About3 />
-          <Service5 />
-          <WhyUs6 />
-          <Client3 />
-          <Stats5 />
-          <Contact2 />
-          <Footer2 />
-          <Scripts />
-        </div>
-      </div>
+      {/* <div id="smooth-wrapper">
+        <div className="smooth-content"> */}
+      <Header1 />
+      <Hero1 />
+      <About3 />
+      <Service5 />
+      <WhyUs6 />
+      <Client3 />
+      <Stats5 />
+      <Contact2 />
+      <Footer2 />
+      <Scripts />
+      {/* </div>
+      </div> */}
     </>
   );
 };
