@@ -1,4 +1,7 @@
-export default function Service(...props) {
-  console.log(props);
-  return <div>Service</div>;
+"use client";
+
+import { ServiceDetailsPage } from "@/page/service-details";
+
+export default function Service({ params }: AppRouterProps) {
+  return <ServiceDetailsPage id={params.service} />;
 }

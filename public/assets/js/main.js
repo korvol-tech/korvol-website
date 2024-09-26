@@ -66,7 +66,6 @@
         Preloader activation
     ========================================*/
   $(document).ready(function () {
-    console.log("Page has been loaded successfully");
     $("#preloader").delay(1000).fadeOut(500);
     // Text Animation
     setTimeout(() => {
@@ -166,7 +165,6 @@
       $(document).on("click", ".sidebar-trigger", function (e) {
         e.preventDefault();
         $("body").toggleClass("open-sidebar");
-        console.log("called ");
       });
       $(document).on(
         "click",
@@ -210,17 +208,13 @@
     });
 
     /* Odometer */
-    console.log($(".odometer"), Waypoint);
     $(".odometer").waypoint(
       function () {
         var odo = $(".odometer");
-
-        if (odo && odo.length) {
-          odo.each(function () {
-            var countNumber = $(this).attr("data-count");
-            $(this).html(countNumber);
-          });
-        }
+        odo.each(function () {
+          var countNumber = $(this).attr("data-count");
+          $(this).html(countNumber);
+        });
       },
       {
         offset: "80%",

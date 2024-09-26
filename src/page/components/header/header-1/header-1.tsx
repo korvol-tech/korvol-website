@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CSSProperties, FC } from "react";
 
 const Header1: FC = () => {
@@ -15,12 +16,12 @@ const Header1: FC = () => {
               <a href="index.html">
                 <img
                   className="logo-dark"
-                  src="assets/img/logo/Logo Dark 2.png"
+                  src="/assets/img/logo/Logo Dark 2.png"
                   alt="Logo"
                 />
                 <img
                   className="logo-light"
-                  src="assets/img/logo/Logo Light 2.png"
+                  src="/assets/img/logo/Logo Light 2.png"
                   alt="Logo"
                 />
               </a>
@@ -29,105 +30,35 @@ const Header1: FC = () => {
               <div className="header-menu-wrap">
                 <div className="mobile-menu-items">
                   <ul>
-                    <li className="menu-item-has-children active">
-                      <a href="index.html">Home</a>
-                      <ul>
-                        <li>
-                          <a href="index.html">Web Design</a>
-                        </li>
-                        <li>
-                          <a href="index-2.html">Creative Studio</a>
-                        </li>
-                        <li>
-                          <a href="index-3.html">Web Development</a>
-                        </li>
-                        <li>
-                          <a href="index-4.html">Modern Agency</a>
-                        </li>
-                        <li>
-                          <a href="index-5.html">It Solution</a>
-                        </li>
-                        <li>
-                          <a href="index-6.html">Digital Agency</a>
-                        </li>
-                      </ul>
+                    <li className="active">
+                      <Link href={"/"}>Home</Link>
                     </li>
                     <li className="menu-item-has-children">
-                      <a href="#">Pages</a>
+                      <a href="/services">Services</a>
                       <ul>
                         <li>
-                          <a href="about.html">About</a>
+                          <a href="/services/e-commerce">E-Commerce</a>
                         </li>
                         <li>
-                          <a href="team.html">Team</a>
-                        </li>
-                        <li>
-                          <a href="team-details.html">Team Details</a>
-                        </li>
-                        <li>
-                          <a href="project.html">Portfolio</a>
-                        </li>
-                        <li>
-                          <a href="project-details.html">Portfolio Details</a>
-                        </li>
-                        <li>
-                          <a href="pricing.html">Pricing Plans</a>
-                        </li>
-                        <li>
-                          <a href="faq.html">Faq</a>
-                        </li>
-                        <li>
-                          <a href="error.html">404 Error</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <a href="service.html">Services</a>
-                      <ul>
-                        <li>
-                          <a href="service.html">Service</a>
-                        </li>
-                        <li>
-                          <a href="service-details.html">Service Details</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <a href="shop.html">Shop</a>
-                      <ul>
-                        <li>
-                          <a href="shop.html">Shop</a>
-                        </li>
-                        <li>
-                          <a href="shop-details.html">Shop Details</a>
-                        </li>
-                        <li>
-                          <a href="cart.html">Cart</a>
-                        </li>
-                        <li>
-                          <a href="wishlist.html">Wishlist</a>
-                        </li>
-                        <li>
-                          <a href="checkout.html">Checkout</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <a href="blog-grid.html">Blog</a>
-                      <ul>
-                        <li>
-                          <a href="blog-grid.html">Blog Grid</a>
-                        </li>
-                        <li>
-                          <a href="blog-grid-2.html">Blog list</a>
-                        </li>
-                        <li>
-                          <a href="blog-details.html">Blog Details</a>
+                          <a href="/services/digital-marketing">
+                            Digital Marketing
+                          </a>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <a href="contact.html">Contact</a>
+                      <a href="/contact">Contact</a>
+                    </li>
+                    <li className="menu-item-has-children">
+                      <Link href="#">More</Link>
+                      <ul>
+                        <li>
+                          <Link href="about.html">About</Link>
+                        </li>
+                        {/* <li>
+                          <a href="pricing.html">Pricing Plans</a>
+                        </li> */}
+                      </ul>
                     </li>
                   </ul>
                 </div>
@@ -210,7 +141,7 @@ const Header1: FC = () => {
         <div className="side-menu-content">
           <div className="side-menu-head">
             <a href="index.html">
-              <img src="assets/img/logo/logo-2.png" alt="logo" />
+              <img src="/assets/img/logo/logo-2.png" alt="logo" />
             </a>
             <button className="mobile-side-menu-close">
               <i className="fa-regular fa-xmark"></i>
@@ -276,10 +207,10 @@ const Header1: FC = () => {
         <div className="side-menu-content">
           <div className="side-menu-logo">
             <a className="dark-img" href="index.html">
-              <img src="assets/img/logo/logo-2.png" alt="logo" />
+              <img src="/assets/img/logo/logo-2.png" alt="logo" />
             </a>
             <a className="light-img" href="index.html">
-              <img src="assets/img/logo/logo-3.png" alt="logo" />
+              <img src="/assets/img/logo/logo-3.png" alt="logo" />
             </a>
           </div>
           <div className="side-menu-wrap"></div>

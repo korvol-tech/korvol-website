@@ -5,7 +5,7 @@ const Stats5: FC = () => {
     <section className="process-section process-3 pb-130 fade-wrapper">
       <div
         className="bg-shape"
-        data-background="assets/img/shapes/process-bg-shape.png"
+        data-background="/assets/img/shapes/process-bg-shape.png"
       ></div>
       <div className="process-counter">
         <div className="container">
@@ -13,7 +13,7 @@ const Stats5: FC = () => {
             <div className="col-lg-3 col-md-6">
               <div className="counter-card">
                 <div className="icon">
-                  <img src="assets/img/icon/counter-1.png" alt="counter" />
+                  <img src="/assets/img/icon/counter-1.png" alt="counter" />
                 </div>
                 <div className="content">
                   <h3 className="title">
@@ -29,7 +29,7 @@ const Stats5: FC = () => {
             <div className="col-lg-3 col-md-6">
               <div className="counter-card">
                 <div className="icon">
-                  <img src="assets/img/icon/counter-2.png" alt="counter" />
+                  <img src="/assets/img/icon/counter-2.png" alt="counter" />
                 </div>
                 <div className="content">
                   <h3 className="title">
@@ -45,7 +45,7 @@ const Stats5: FC = () => {
             <div className="col-lg-3 col-md-6">
               <div className="counter-card">
                 <div className="icon">
-                  <img src="assets/img/icon/counter-3.png" alt="counter" />
+                  <img src="/assets/img/icon/counter-3.png" alt="counter" />
                 </div>
                 <div className="content">
                   <h3 className="title">
@@ -61,7 +61,7 @@ const Stats5: FC = () => {
             <div className="col-lg-3 col-md-6">
               <div className="counter-card card-4">
                 <div className="icon">
-                  <img src="assets/img/icon/counter-4.png" alt="counter" />
+                  <img src="/assets/img/icon/counter-4.png" alt="counter" />
                 </div>
                 <div className="content">
                   <h3 className="title">

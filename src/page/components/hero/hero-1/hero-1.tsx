@@ -4,18 +4,18 @@ const Hero1: FC = () => {
   return (
     <section className="hero-section">
       <div className="hero-bg-shape">
-        <img src="assets/img/bg-img/hero-bg-shape.png" alt="shape" />
+        <img src="/assets/img/bg-img/hero-bg-shape.png" alt="shape" />
       </div>
       <div className="hero-shape">
-        <img src="assets/img/shapes/hero-shape-1.png" alt="shape" />
+        <img src="/assets/img/shapes/hero-shape-1.png" alt="shape" />
       </div>
       <div className="hero-images">
-        <img src="assets/img/images/hero-img-1.png" alt="hero" />
-        <img src="assets/img/images/hero-img-2.png" alt="hero" />
-        <img src="assets/img/images/hero-img-3.png" alt="hero" />
+        <img src="/assets/img/images/hero-img-1.png" alt="hero" />
+        <img src="/assets/img/images/hero-img-2.png" alt="hero" />
+        <img src="/assets/img/images/hero-img-3.png" alt="hero" />
       </div>
       <div className="hero-img">
-        <img src="assets/img/images/hero-img.png" alt="hero" />
+        <img src="/assets/img/images/hero-img.png" alt="hero" />
       </div>
       <div className="container">
         <div className="hero-content">

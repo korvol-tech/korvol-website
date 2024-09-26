@@ -4,17 +4,17 @@ const About3: FC = () => {
   return (
     <section className="about-section-4 pb-130">
       <div className="shape">
-        <img src="assets/img/shapes/about-shape-3.png" alt="shape" />
+        <img src="/assets/img/shapes/about-shape-3.png" alt="shape" />
       </div>
       <div className="container">
         <div className="row gy-lg-0 gy-4 align-items-center">
           <div className="col-lg-6 col-md-12">
             <div className="about-img-wrap-4">
               <div className="about-img img-1 reveal">
-                <img src="assets/img/images/about-img-6.png" alt="img" />
+                <img src="/assets/img/images/about-img-6.png" alt="img" />
               </div>
               <div className="about-img img-2 reveal">
-                <img src="assets/img/images/about-img-7.png" alt="img" />
+                <img src="/assets/img/images/about-img-7.png" alt="img" />
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ const About3: FC = () => {
               <div className="about-counter-wrap">
                 <div className="about-counter">
                   <div className="icon">
-                    <img src="assets/img/icon/about-3.png" alt="icon" />
+                    <img src="/assets/img/icon/about-3.png" alt="icon" />
                   </div>
                   <div className="content">
                     <h3 className="title">
@@ -62,7 +62,7 @@ const About3: FC = () => {
                 </div>
                 <div className="about-counter">
                   <div className="icon">
-                    <img src="assets/img/icon/about-4.png" alt="icon" />
+                    <img src="/assets/img/icon/about-4.png" alt="icon" />
                   </div>
                   <div className="content">
                     <h3 className="title">

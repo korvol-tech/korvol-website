@@ -11,25 +11,25 @@ const ServicesPage: FC = () => {
         <div id="smooth-content">
           <section
             className="page-header"
-            data-background="assets/img/bg-img/page-header-bg.jpg"
+            data-background="/assets/img/bg-img/page-header-bg.jpg"
           >
             <div className="overlay"></div>
             <div className="shapes">
               <div className="shape shape-1">
                 <img
-                  src="assets/img/shapes/page-header-shape-1.png"
+                  src="/assets/img/shapes/page-header-shape-1.png"
                   alt="shape"
                 />
               </div>
               <div className="shape shape-2">
                 <img
-                  src="assets/img/shapes/page-header-shape-2.png"
+                  src="/assets/img/shapes/page-header-shape-2.png"
                   alt="shape"
                 />
               </div>
               <div className="shape shape-3">
                 <img
-                  src="assets/img/shapes/page-header-shape-3.png"
+                  src="/assets/img/shapes/page-header-shape-3.png"
                   alt="shape"
                 />
               </div>
@@ -63,12 +63,12 @@ const ServicesPage: FC = () => {
                       <div className="overlay-color"></div>
                       <div className="transparent-shape">
                         <img
-                          src="assets/img/shapes/service-shape.png"
+                          src="/assets/img/shapes/service-shape.png"
                           alt="shape"
                         />
                       </div>
                       <img
-                        src="assets/img/service/service-2.jpg"
+                        src="/assets/img/service/service-2.jpg"
                         alt="service"
                       />
                       <div className="service-icon">
@@ -105,12 +105,12 @@ const ServicesPage: FC = () => {
                       <div className="overlay-color"></div>
                       <div className="transparent-shape">
                         <img
-                          src="assets/img/shapes/service-shape.png"
+                          src="/assets/img/shapes/service-shape.png"
                           alt="shape"
                         />
                       </div>
                       <img
-                        src="assets/img/service/service-1.jpg"
+                        src="/assets/img/service/service-1.jpg"
                         alt="service"
                       />
                       <div className="service-icon">
@@ -143,12 +143,12 @@ const ServicesPage: FC = () => {
                       <div className="overlay-color"></div>
                       <div className="transparent-shape">
                         <img
-                          src="assets/img/shapes/service-shape.png"
+                          src="/assets/img/shapes/service-shape.png"
                           alt="shape"
                         />
                       </div>
                       <img
-                        src="assets/img/service/service-3.jpg"
+                        src="/assets/img/service/service-3.jpg"
                         alt="service"
                       />
                       <div className="service-icon">
@@ -181,12 +181,12 @@ const ServicesPage: FC = () => {
                       <div className="overlay-color"></div>
                       <div className="transparent-shape">
                         <img
-                          src="assets/img/shapes/service-shape.png"
+                          src="/assets/img/shapes/service-shape.png"
                           alt="shape"
                         />
                       </div>
                       <img
-                        src="assets/img/service/service-4.jpg"
+                        src="/assets/img/service/service-4.jpg"
                         alt="service"
                       />
                       <div className="service-icon">
@@ -243,12 +243,12 @@ const ServicesPage: FC = () => {
                       <div className="overlay-color"></div>
                       <div className="transparent-shape">
                         <img
-                          src="assets/img/shapes/service-shape.png"
+                          src="/assets/img/shapes/service-shape.png"
                           alt="shape"
                         />
                       </div>
                       <img
-                        src="assets/img/service/service-8.jpg"
+                        src="/assets/img/service/service-8.jpg"
                         alt="service"
                       />
                       <div className="service-icon">
@@ -285,12 +285,12 @@ const ServicesPage: FC = () => {
                       <div className="overlay-color"></div>
                       <div className="transparent-shape">
                         <img
-                          src="assets/img/shapes/service-shape.png"
+                          src="/assets/img/shapes/service-shape.png"
                           alt="shape"
                         />
                       </div>
                       <img
-                        src="assets/img/service/service-9.jpg"
+                        src="/assets/img/service/service-9.jpg"
                         alt="service"
                       />
                       <div className="service-icon">
@@ -323,12 +323,12 @@ const ServicesPage: FC = () => {
                       <div className="overlay-color"></div>
                       <div className="transparent-shape">
                         <img
-                          src="assets/img/shapes/service-shape.png"
+                          src="/assets/img/shapes/service-shape.png"
                           alt="shape"
                         />
                       </div>
                       <img
-                        src="assets/img/service/service-10.jpg"
+                        src="/assets/img/service/service-10.jpg"
                         alt="service"
                       />
                       <div className="service-icon">
@@ -361,12 +361,12 @@ const ServicesPage: FC = () => {
                       <div className="overlay-color"></div>
                       <div className="transparent-shape">
                         <img
-                          src="assets/img/shapes/service-shape.png"
+                          src="/assets/img/shapes/service-shape.png"
                           alt="shape"
                         />
                       </div>
                       <img
-                        src="assets/img/service/service-11.jpg"
+                        src="/assets/img/service/service-11.jpg"
                         alt="service"
                       />
                       <div className="service-icon">
@@ -421,7 +421,7 @@ const ServicesPage: FC = () => {
           <section className="service-cta">
             <div
               className="bg-img"
-              data-background="assets/img/bg-img/service-cta.jpg"
+              data-background="/assets/img/bg-img/service-cta.jpg"
             ></div>
             <div className="overlay"></div>
             <div className="container">

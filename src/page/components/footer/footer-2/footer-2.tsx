@@ -4,13 +4,13 @@ const Footer2: FC = () => {
   return (
     <footer className="footer-section footer-2 bg-dark-1">
       <div className="shape">
-        <img src="assets/img/shapes/footer-shape.png" alt="footer" />
+        <img src="/assets/img/shapes/footer-shape.png" alt="footer" />
       </div>
       <div className="container">
         <div className="footer-top">
           <div className="footer-logo">
             <a href="index.html">
-              <img src="assets/img/logo/logo-2.png" alt="logo" />
+              <img src="/assets/img/logo/logo-2.png" alt="logo" />
             </a>
           </div>
           <ul className="social-list">

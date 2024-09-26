@@ -25,7 +25,7 @@ const Contact2: FC = () => {
             </h2>
           </div>
           <div className="cta-thumb-wrap">
-            <img src="assets/img/images/cta-img.png" alt="cta" />
+            <img src="/assets/img/images/cta-img.png" alt="cta" />
             <a href="contact.html" className="cta-btn">
               <i className="fa-sharp fa-regular fa-arrow-right"></i>
             </a>
