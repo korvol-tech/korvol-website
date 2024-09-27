@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import globalConfig from "@/config/global-config";
+
+const { brandName, tagLine, aboutUs } = globalConfig;
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,9 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AngularSlant | Empowering Business Online",
-  description:
-    "AngularSlant is a digital agency that helps businesses grow online.",
+  title: `${brandName} | ${tagLine}`,
+  description: aboutUs.content,
 };
 
 export default function RootLayout({

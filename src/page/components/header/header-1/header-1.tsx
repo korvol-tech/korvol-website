@@ -1,65 +1,64 @@
+import globalConfig from "@/config/global-config";
+import clsx from "clsx";
+import Image from "next/image";
 import Link from "next/link";
 import { CSSProperties, FC } from "react";
+
+const { brandName, logo, navLinks, address, contact, socialLinks, aboutUs } =
+  globalConfig;
 
 const Header1: FC = () => {
   return (
     <>
       <div />
       <div id="preloader">
-        <div className="loading" data-loading-text="Korvol"></div>
+        <div className="loading" data-loading-text={brandName}></div>
       </div>
       {/* header-area-start */}
-      <header className="header sticky-active">
+      <header className="header sticky-active bg-red">
         <div className="primary-header">
           <div className="primary-header-inner">
             <div className="header-logo d-lg-block">
-              <a href="index.html">
-                <img
+              <Link href={navLinks.get("home")?.href as string}>
+                <Image
                   className="logo-dark"
-                  src="/assets/img/logo/Logo Dark 2.png"
-                  alt="Logo"
+                  src={logo.dark.src}
+                  alt={logo.dark.alt}
+                  width={150}
+                  height={20.84}
                 />
-                <img
+                <Image
                   className="logo-light"
-                  src="/assets/img/logo/Logo Light 2.png"
-                  alt="Logo"
+                  src={logo.light.src}
+                  alt={logo.light.alt}
+                  width={150}
+                  height={20.84}
                 />
-              </a>
+              </Link>
             </div>
             <div className="header-right-wrap">
               <div className="header-menu-wrap">
                 <div className="mobile-menu-items">
                   <ul>
-                    <li className="active">
-                      <Link href={"/"}>Home</Link>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <a href="/services">Services</a>
-                      <ul>
-                        <li>
-                          <a href="/services/e-commerce">E-Commerce</a>
-                        </li>
-                        <li>
-                          <a href="/services/digital-marketing">
-                            Digital Marketing
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="/contact">Contact</a>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <Link href="#">More</Link>
-                      <ul>
-                        <li>
-                          <Link href="about.html">About</Link>
-                        </li>
-                        {/* <li>
-                          <a href="pricing.html">Pricing Plans</a>
-                        </li> */}
-                      </ul>
-                    </li>
+                    {Array.from(navLinks.values()).map((navLink) => (
+                      <li
+                        key={navLink.text}
+                        className={clsx(
+                          navLink.children && "menu-item-has-children"
+                        )}
+                      >
+                        <Link href={navLink.href}>{navLink.text}</Link>
+                        {navLink.children && (
+                          <ul className="sub-menu">
+                            {navLink.children.map((child) => (
+                              <li key={child.text}>
+                                <Link href={child.href}>{child.text}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -140,9 +139,14 @@ const Header1: FC = () => {
       <div className="mobile-side-menu">
         <div className="side-menu-content">
           <div className="side-menu-head">
-            <a href="index.html">
-              <img src="/assets/img/logo/logo-2.png" alt="logo" />
-            </a>
+            <Link href={navLinks.get("home")?.href as string}>
+              <Image
+                src={logo.dark.src}
+                alt={logo.dark.alt}
+                width={150}
+                height={20.84}
+              />
+            </Link>
             <button className="mobile-side-menu-close">
               <i className="fa-regular fa-xmark"></i>
             </button>
@@ -155,11 +159,11 @@ const Header1: FC = () => {
             </li>
             <li>
               <i className="fa-light fa-phone"></i>Phone :{" "}
-              <a href="tel:+01569896654">+01 569 896 654</a>
+              <Link href="tel:+01569896654">+01 569 896 654</Link>
             </li>
             <li>
               <i className="fa-light fa-envelope"></i>Email :{" "}
-              <a href="mailto:info@example.com">info@example.com</a>
+              <Link href="mailto:info@example.com">info@example.com</Link>
             </li>
           </ul>
         </div>
@@ -206,69 +210,89 @@ const Header1: FC = () => {
         </button>
         <div className="side-menu-content">
           <div className="side-menu-logo">
-            <a className="dark-img" href="index.html">
-              <img src="/assets/img/logo/logo-2.png" alt="logo" />
-            </a>
-            <a className="light-img" href="index.html">
-              <img src="/assets/img/logo/logo-3.png" alt="logo" />
-            </a>
+            <Link
+              className="dark-img"
+              href={navLinks.get("home")?.href as string}
+            >
+              <Image
+                src={logo.dark.src}
+                alt={logo.dark.alt}
+                width={150}
+                height={20.84}
+              />
+            </Link>
+            <Link
+              className="light-img"
+              href={navLinks.get("home")?.href as string}
+            >
+              <Image
+                src={logo.light.src}
+                alt={logo.light.alt}
+                width={150}
+                height={20.84}
+              />
+            </Link>
           </div>
           <div className="side-menu-wrap"></div>
           <div className="side-menu-about">
             <div className="side-menu-header">
-              <h3>About Us</h3>
+              <h3>{aboutUs.title}</h3>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo
-              consequat.
-            </p>
-            <a href="contact.html" className="rr-primary-btn">
+            <p>{aboutUs.content}</p>
+            <Link
+              href={navLinks.get("contact")?.href as string}
+              className="rr-primary-btn"
+            >
               Contact Us
-            </a>
+            </Link>
           </div>
           <div className="side-menu-contact">
             <div className="side-menu-header">
               <h3>Contact Us</h3>
             </div>
             <ul className="side-menu-list">
-              <li>
+              <li className="flex !items-start">
                 <i className="fas fa-map-marker-alt"></i>
-                <p>Valentin, Street Road 24, New York, </p>
+                <p>
+                  {address.building}
+                  <br />
+                  {address.street}, {address.area}
+                  <br />
+                  {address.district}, {address.city} - {address.zip}
+                </p>
               </li>
               <li>
                 <i className="fas fa-phone"></i>
-                <a href="tel:+000123456789">+000 123 (456) 789</a>
+                <Link href={`tel:${contact.phone.replaceAll(/\s/g, "")}`}>
+                  {contact.phone}
+                </Link>
               </li>
               <li>
                 <i className="fas fa-envelope-open-text"></i>
-                <a href="mailto:runokcontact@gmail.com">
-                  runokcontact@gmail.com
-                </a>
+                <Link href={`mailto:${contact.email}`}>{contact.email}</Link>
               </li>
             </ul>
           </div>
           <ul className="side-menu-social">
             <li className="facebook">
-              <a href="#">
+              <Link href={socialLinks.facebook}>
                 <i className="fab fa-facebook-f"></i>
-              </a>
+              </Link>
             </li>
             <li className="instagram">
-              <a href="#">
+              <Link href={socialLinks.instagram}>
                 <i className="fab fa-instagram"></i>
-              </a>
+              </Link>
             </li>
             <li className="twitter">
-              <a href="#">
+              <Link href={socialLinks.twitter}>
                 <i className="fab fa-twitter"></i>
-              </a>
+              </Link>
             </li>
-            <li className="g-plus">
-              <a href="#">
-                <i className="fab fa-fab fa-google-plus"></i>
-              </a>
+            <li className="linkedin">
+              <Link href={socialLinks.linkedin}>
+                <i className="fab fa-linkedin-in"></i>
+              </Link>
             </li>
           </ul>
         </div>

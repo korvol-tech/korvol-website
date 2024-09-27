@@ -12,8 +12,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.test {
-  height: var(--rr-fs-h1);
-  width: var(--rr-fs-h1);
-}
