@@ -10,7 +10,10 @@ const Footer2: FC = () => {
         <div className="footer-top">
           <div className="footer-logo">
             <a href="index.html">
-              <img src="/assets/img/logo/logo-2.png" alt="logo" />
+              <img src="/assets/img/logo/logo-dark.png" alt="logo" style={{
+                width: "250px",
+                height: "auto"
+              }} />
             </a>
           </div>
           <ul className="social-list">
