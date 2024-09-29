@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import globalConfig from "@/config/global-config";
+import { Redirector } from "@/components/redirector";
 
 const { brandName, tagLine, aboutUs } = globalConfig;
 
@@ -37,7 +38,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Redirector sources={["/"]} destination="/getting-started">
+          {children}
+        </Redirector>
       </body>
     </html>
   );
