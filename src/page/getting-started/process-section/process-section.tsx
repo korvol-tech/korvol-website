@@ -8,22 +8,29 @@ const ProcessSection: FC = () => {
         <div className="bg-gray-100 p-6 rounded-lg max-w-xs">
           <h3 className="text-xl font-semibold mb-4">Consultation</h3>
           <p>
-            We discuss your business goals and customize a solution for you.
+            We discuss your business idea and tailor a complete e-commerce
+            solution to fit your needs.
           </p>
         </div>
         <div className="bg-gray-100 p-6 rounded-lg max-w-xs">
           <h3 className="text-xl font-semibold mb-4">Store Setup</h3>
-          <p>We build and launch your online store with everything you need.</p>
+          <p>
+            We design and launch your online store, handling everything from
+            inventory to payments.
+          </p>
         </div>
         <div className="bg-gray-100 p-6 rounded-lg max-w-xs">
           <h3 className="text-xl font-semibold mb-4">Marketing</h3>
-          <p>We create marketing campaigns that bring you traffic and sales.</p>
+          <p>
+            We create marketing campaigns on Google Ads and social media to
+            drive traffic and sales.
+          </p>
         </div>
         <div className="bg-gray-100 p-6 rounded-lg max-w-xs">
-          <h3 className="text-xl font-semibold mb-4">Launch & Support</h3>
+          <h3 className="text-xl font-semibold mb-4">Support & Growth</h3>
           <p>
             Your store goes live, and we provide ongoing support to help you
-            grow.
+            grow your business.
           </p>
         </div>
       </div>
