@@ -1,12 +1,13 @@
 import React, { FC, ReactNode, useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import clsx from "clsx";
 
 function GettingStarted3() {
   const container = useRef(null);
 
   return (
     <div ref={container} style={{ height: 10000 }}>
-      <div className="container h-screen flex flex-col gap-8 justify-center items-center text-white">
+      {/* <div className="container h-screen flex flex-col gap-8 justify-center items-center text-white">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,20 +40,37 @@ function GettingStarted3() {
         >
           Get started
         </motion.button>
-        {/* <button className="px-3 py-2 !bg-primary text-white rounded-sm">
-          Get started
-        </button> */}
-      </div>
-      <ScrollFadeText
+      </div> */}
+      <ScrollFade
         id="two"
         text="Thinking to start your E-commerce business but don’t know where to
           begin?"
+        img={{
+          src: "/assets/img/icon/searching.svg",
+          alt: "searching",
+          className: "w-full",
+        }}
       />
-      <ScrollFadeText text="Want to sell online but unsure of the next steps?" />
-      <ScrollFadeText text="Got an online business idea but need guidance and support?" />
+      <ScrollFade
+        text="Want to sell online but unsure of the next steps?"
+        img={{
+          src: "/assets/img/icon/next-steps.svg",
+          alt: "next-steps",
+          className: "w-full",
+        }}
+        arrangment="img-text"
+      />
+      <ScrollFade
+        text="Got an online business idea but need guidance and support to get started?"
+        img={{
+          src: "/assets/img/icon/directions.svg",
+          alt: "directions",
+          className: "w-full",
+        }}
+      />
       <Callout />
       <Services />
-      <ScrollFadeText
+      <ScrollFade
         text={
           <span className="flex flex-col gap-4">
             Whether you’re already running a business
@@ -65,11 +83,22 @@ function GettingStarted3() {
   );
 }
 
-type ScrollFadeTextProps = JSX.IntrinsicElements["div"] & {
+type ScrollFadeProps = JSX.IntrinsicElements["div"] & {
   text: ReactNode;
+  img?: {
+    src: string;
+    alt: string;
+    className?: string;
+  };
+  arrangment?: "text-img" | "img-text";
 };
 
-function ScrollFadeText({ text, ...props }: ScrollFadeTextProps) {
+const ScrollFade: FC<ScrollFadeProps> = ({
+  text,
+  img,
+  arrangment = "text-img",
+  ...props
+}: ScrollFadeProps) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref, // Track scroll within this component's boundaries
@@ -89,17 +118,32 @@ function ScrollFadeText({ text, ...props }: ScrollFadeTextProps) {
   return (
     <div
       ref={ref}
-      className="container h-screen flex items-center justify-center"
+      className={clsx(
+        "container h-screen grid grid-cols-1 items-center justify-center w-full",
+        arrangment === "img-text" && "md:direction-col-reverse",
+        img ? "md:grid-cols-2" : "md:grid-cols-1"
+      )}
       {...props}
     >
       <motion.h1
         style={{ opacity }} // Bind the opacity to the scrolling value
+        className={clsx(
+          "text-4xl md:text-6xl font-bold",
+          arrangment === "img-text" && "text-right md:order-2"
+        )}
       >
-        <h1 className="text-4xl md:text-6xl font-bold">{text}</h1>
+        {text}
       </motion.h1>
+      <motion.img
+        {...img}
+        className={clsx(
+          img?.className,
+          arrangment === "img-text" && "md:order-1"
+        )}
+      />
     </div>
   );
-}
+};
 
 const Callout = () => {
   const ref = useRef(null);
@@ -110,29 +154,36 @@ const Callout = () => {
   return (
     <div
       ref={ref}
-      className="h-screen flex flex-col justify-center items-center text-white"
+      className="h-screen flex flex-col justify-center items-center text-white relative"
     >
-      <motion.div
+      <motion.img
         initial={{ opacity: 0, y: -50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="w-60 h-32 !bg-primary rounded-[50%] !skew-x-[-50deg]"
-        style={{
-          // oval shape, slanted from top to bottom
-          clipPath: "ellipse(50% 50% at 50% 50%)",
-          // rotate on z-axis to slant the oval
-          // transform: "rotateZ(45deg)",
-          transform: "translateZ(50px)",
-        }}
-      ></motion.div>
+        src="/assets/img/icon/blob-1.svg"
+        alt="blob"
+        className="w-full md:w-[80%] absolute transform -translate-x-1/2 -translate-y-1/2"
+        // style={{
+        //   // oval shape, slanted from top to bottom
+        //   clipPath: "ellipse(50% 50% at 50% 50%)",
+        //   // rotate on z-axis to slant the oval
+        //   // transform: "rotateZ(45deg)",
+        //   transform: "translateZ(50px)",
+        // }}
+      />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={isInView ? { opacity: 1, y: -100 } : { opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.8, delay: 0.13 }}
       >
-        <h1 className="text-xl font-semibold text-center">
-          Look no further—Korvol has the complete e-commerce solution you’ve
-          been searching for!
+        <h1 className="text-3xl font-semibold text-center flex flex-col gap-6">
+          <span>Look no further 🤚</span>
+          {/* <span className=""></span> */}
+          <span className="text-5xl md:text-7xl font-bold">
+            We have the complete{" "}
+            <span className="!text-secondary">e-commerce solution</span>
+          </span>
+          <span>You’ve been searching for!</span>
         </h1>
       </motion.div>
     </div>
@@ -145,6 +196,54 @@ const Services: FC = () => {
     margin: "0px 0px -100px 0px",
   });
 
+  const services = [
+    {
+      title: "Online Store",
+      img: "/assets/img/icon/shop.svg",
+      description: "Creating your online store",
+    },
+    {
+      title: "Inventory",
+      img: "/assets/img/icon/inventory.svg",
+      description: "Setting up your inventory",
+    },
+    {
+      title: "Payment Gateway",
+      img: "/assets/img/icon/payment.svg",
+      description: "Integrating payment gateway",
+    },
+    {
+      title: "Logistics",
+      img: "/assets/img/icon/delivery.svg",
+      description: "Setting up your logistics",
+    },
+    {
+      title: "Order Management",
+      img: "/assets/img/icon/order.svg",
+      description: "Order Management",
+    },
+    {
+      title: "Customer Support",
+      img: "/assets/img/icon/customer-support.svg",
+      description: "Customer Support",
+    },
+    {
+      title: "Digital Advertising",
+      img: "/assets/img/icon/ads.svg",
+      description: "Advertising your business digitally",
+    },
+    {
+      title: "Social Media Management",
+      img: [
+        "/assets/img/icon/facebook.svg",
+        "/assets/img/icon/instagram.svg",
+        "/assets/img/icon/x.svg",
+        "/assets/img/icon/linkedin.svg",
+      ],
+      description: "Managing your social media",
+    },
+  ];
+
   return (
     <div
       ref={ref}
@@ -153,157 +252,40 @@ const Services: FC = () => {
       <motion.div>
         <h3 className="text-2xl md:text-3xl font-bold text-center">From</h3>
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="flex flex-col items-center space-y-4"
-      >
-        <motion.img
-          src="/assets/img/icon/shop.svg"
-          alt="shop"
-          className="w-20 h-20"
-        />
-        <motion.p className="text-white">Creating your online store</motion.p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="flex flex-col items-center space-y-4"
-      >
-        <motion.h4 className="text-xl md:text-2xl font-semibold text-center">
-          To
-        </motion.h4>
-        <motion.img
-          src="/assets/img/icon/inventory.svg"
-          alt="inventory"
-          className="w-20 h-20"
-        />
-        <motion.p className="text-white">Setting up your inventory</motion.p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="flex flex-col items-center space-y-4"
-      >
-        <motion.h4 className="text-xl md:text-2xl font-semibold text-center">
-          To
-        </motion.h4>
-        <motion.img
-          src="/assets/img/icon/payment.svg"
-          alt="payment"
-          className="w-20 h-20"
-        />
-        <motion.p className="text-white">Integrating payment gateway</motion.p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="flex flex-col items-center space-y-4"
-      >
-        <motion.h4 className="text-xl md:text-2xl font-semibold text-center">
-          To
-        </motion.h4>
-        <motion.img
-          src="/assets/img/icon/delivery.svg"
-          alt="delivery"
-          className="w-20 h-20"
-        />
-        <motion.p className="text-white">Setting up your logistics</motion.p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="flex flex-col items-center space-y-4"
-      >
-        <motion.h4 className="text-xl md:text-2xl font-semibold text-center">
-          To
-        </motion.h4>
-        <motion.img
-          src="/assets/img/icon/order.svg"
-          alt="order"
-          className="w-20 h-20"
-        />
-        <motion.p className="text-white">Order Management</motion.p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="flex flex-col items-center space-y-4"
-      >
-        <motion.h4 className="text-xl md:text-2xl font-semibold text-center">
-          To
-        </motion.h4>
-        <motion.img
-          src="/assets/img/icon/customer-support.svg"
-          alt="customer-support"
-          className="w-20 h-20"
-        />
-        <motion.p className="text-white">Customer Support</motion.p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="flex flex-col items-center space-y-4"
-      >
-        <motion.h4 className="text-xl md:text-2xl font-semibold text-center">
-          To
-        </motion.h4>
-        <motion.img
-          src="/assets/img/icon/ads.svg"
-          alt="ads"
-          className="w-20 h-20"
-        />
-        <motion.p className="text-white">
-          Advertising your business digitally
-        </motion.p>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="flex flex-col items-center space-y-4"
-      >
-        <motion.h4 className="text-xl md:text-2xl font-semibold text-center">
-          To
-        </motion.h4>
-        <motion.div className="grid grid-cols-2 grid-rows-2 gap-1">
-          <motion.img
-            src="/assets/img/icon/facebook.svg"
-            alt="facebook"
-            className="w-10 h-10"
-          />
-          <motion.img
-            src="/assets/img/icon/instagram.svg"
-            alt="instagram"
-            className="w-10 h-10"
-          />
-          <motion.img
-            src="/assets/img/icon/x.svg"
-            alt="x"
-            className="w-10 h-10"
-          />
-          <motion.img
-            src="/assets/img/icon/linkedin.svg"
-            alt="linkedin"
-            className="w-10 h-10"
-          />
-        </motion.div>
-        <motion.p className="text-white">Managing your social media</motion.p>
-      </motion.div>
+      {isInView
+        ? services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 + index * 0.5 }}
+              className="flex flex-col items-center space-y-4"
+            >
+              {/* <motion.h4 className="text-xl md:text-2xl font-semibold text-center">
+                {service.title}
+              </motion.h4> */}
+              {Array.isArray(service.img) ? (
+                <motion.div className="grid grid-cols-2 grid-rows-2 gap-1">
+                  {service.img.map((src, index) => (
+                    <motion.img
+                      key={index}
+                      src={src}
+                      alt={service.title}
+                      className="w-10 h-10"
+                    />
+                  ))}
+                </motion.div>
+              ) : (
+                <motion.img
+                  src={service.img}
+                  alt={service.title}
+                  className="w-20 h-20"
+                />
+              )}
+              <motion.p className="text-white">{service.description}</motion.p>
+            </motion.div>
+          ))
+        : null}
     </div>
   );
 };
