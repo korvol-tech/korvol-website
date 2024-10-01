@@ -16,10 +16,6 @@ type BaseImageBoxProps = {
   imgProps?: JSX.IntrinsicElements["img"];
   textProps?: JSX.IntrinsicElements["p"];
   textNode?: ReactNode;
-  ratio?: {
-    img: number;
-    text: number;
-  };
   order?: Order;
 };
 
@@ -56,7 +52,6 @@ const ImageBox: FC<ImageBoxProps> = ({
   imgProps,
   textProps,
   textNode,
-  ratio,
   order,
 }) => {
   const orderClasses = (() => {
