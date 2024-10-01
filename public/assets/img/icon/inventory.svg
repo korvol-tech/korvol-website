@@ -1,5 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#3f5af3"
-  viewBox="0 0 24 24">
-  <path
-    d="M4 8h4V4H4zm6 12h4v-4h-4zm-6 0h4v-4H4zm0-6h4v-4H4zm6 0h4v-4h-4zm6-10v4h4V4zm-6 4h4V4h-4zm6 6h4v-4h-4zm0 6h4v-4h-4z"></path>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Svg Vector Icons : http://www.onlinewebfonts.com/icon -->
+
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="64px" height="66px"
+  version="1.1"
+  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+  viewBox="0 0 64.632 66.762"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#3F5AF3;fill-rule:nonzero}
+    .fil1 {fill:#FBAF00;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2588481116400">
+   <polygon class="fil0" points="50.597,66.703 50.597,47.037 64.632,38.721 64.632,58.241 "/>
+   <path class="fil1" d="M33.381 38.633l6.507 3.618 0 5.632c0,0.583 0.467,1.05 1.05,1.05 0.584,0 1.051,-0.467 1.051,-1.05l0 -4.465 6.507 3.619 0 19.725 -15.115 -8.579 0 -19.55z"/>
+   <path class="fil1" d="M0.029 38.633l6.507 3.618 0 5.632c0,0.583 0.467,1.05 1.051,1.05 0.583,0 1.05,-0.467 1.05,-1.05l0 -4.465 6.478 3.619 0 19.725 -15.115 -8.579 0 -19.55 0.029 0z"/>
+   <polygon class="fil0" points="32.36,0 37.962,2.509 24.306,9.454 18.675,6.624 "/>
+   <polygon class="fil0" points="17.245,47.008 31.28,38.691 31.28,58.212 17.245,66.703 "/>
+   <polygon class="fil0" points="24.248,33.848 30.142,36.882 16.136,45.169 9.746,41.609 "/>
+   <polygon class="fil0" points="48.612,27.866 33.41,35.132 33.41,15.348 48.612,8.258 "/>
+   <polygon class="fil0" points="47.124,6.594 32.36,13.481 26.67,10.621 40.471,3.618 "/>
+   <path class="fil1" d="M23.285 11.292l0 4.873c0,0.584 0.467,1.051 1.05,1.051 0.584,0 1.051,-0.467 1.051,-1.051l0 -3.793 5.923 2.947 0 19.754 -13.947 -7.178 0 -19.579 5.923 2.976z"/>
+   <polygon class="fil0" points="1.255,36.912 16.282,29.733 16.632,29.909 22.001,32.681 7.587,40.413 "/>
+   <polygon class="fil0" points="34.636,36.912 49.634,29.733 55.353,32.681 40.938,40.413 "/>
+   <polygon class="fil0" points="49.546,45.198 43.156,41.639 57.658,33.848 63.552,36.882 "/>
+  </g>
+ </g>
 </svg>

@@ -52,6 +52,16 @@ function GettingStarted3() {
         }}
       />
       <ScrollFade
+        id="two"
+        text="Thinking to start your E-commerce business but don’t know where to
+          begin?"
+        img={{
+          src: "/assets/img/icon/searching.svg",
+          alt: "searching",
+          className: "w-full",
+        }}
+      />
+      <ScrollFade
         text="Want to sell online but unsure of the next steps?"
         img={{
           src: "/assets/img/icon/next-steps.svg",
@@ -220,16 +230,16 @@ const Services: FC = () => {
     {
       title: "Order Management",
       img: "/assets/img/icon/order.svg",
-      description: "Order Management",
+      description: "Managing your orders",
     },
     {
       title: "Customer Support",
       img: "/assets/img/icon/customer-support.svg",
-      description: "Customer Support",
+      description: "Providing customer support",
     },
     {
       title: "Digital Advertising",
-      img: "/assets/img/icon/ads.svg",
+      img: "/assets/img/icon/seo.svg",
       description: "Advertising your business digitally",
     },
     {
@@ -279,7 +289,7 @@ const Services: FC = () => {
                 <motion.img
                   src={service.img}
                   alt={service.title}
-                  className="w-20 h-20"
+                  className="w-20 "
                 />
               )}
               <motion.p className="text-white">{service.description}</motion.p>

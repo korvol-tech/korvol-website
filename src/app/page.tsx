@@ -1,7 +1,7 @@
 "use client";
 
-import { HomePage } from "@/page/home";
+import { HomeLanding } from "@/page/home-landing";
 
 export default function Home() {
-  return <HomePage />;
+  return <HomeLanding />;
 }

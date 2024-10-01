@@ -38,7 +38,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Redirector sources={["/"]} destination="/getting-started">
+        <Redirector sources={["*"]} destination="/">
           {children}
         </Redirector>
       </body>
