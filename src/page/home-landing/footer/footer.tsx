@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const Footer: FC = () => {
   return (
-    <footer className="container py-8">
+    <footer className="container py-8 border-t border-secondary">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex flex-col gap-2 items-center md:items-start">
           <img
@@ -14,11 +14,11 @@ const Footer: FC = () => {
             <em>Your E-commerce Partner</em>
           </p>
         </div>
-        <div className="flex md:justify-end">
+        {/* <div className="flex md:justify-end">
           <button className="!px-2 !py-2 w-full md:w-fit !bg-secondary !text-white">
             Book Your Consultation Now
           </button>
-        </div>
+        </div> */}
         <div className="flex flex-col items:center md:items-start">
           {/* <a className="text-center md:text-end" href="tel:+919316896458">
             +91 93168 96458
