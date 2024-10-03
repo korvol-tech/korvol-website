@@ -13,15 +13,17 @@ const PowerOfEcommerce: FC = () => {
         <SectionHeading className="!text-left">
           Reach Thousands of New Customers with E-Commerce
         </SectionHeading>
-        <div className="grid grid-rows-1 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="flex flex-col gap-28">
+
+        <div className="grid grid-rows-1 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <SectionSubheading className="!text-left md:flex md:justify-center">
             By going online, you unlock access to a growing digital marketplace
             where 70% of consumers prefer to shop
           </SectionSubheading>
           <div className="flex justify-center">
             <motion.img
-              src="/assets/img/icon/rocket.svg"
-              alt="Rocket"
+              src="/assets/img/images/mobile-shop.svg"
+              alt="mobile-shop"
               className="w-36"
             />
           </div>
@@ -33,11 +35,12 @@ const PowerOfEcommerce: FC = () => {
           </SectionSubheading>
           <div className="flex justify-center lg:order-1">
             <motion.img
-              src="/assets/img/icon/rocket.svg"
-              alt="Rocket"
-              className="w-36"
+              src="/assets/img/images/growth.svg"
+              alt="growth"
+              className="w-48"
             />
           </div>
+        </div>
         </div>
       </div>
     </SectionWrapper>

@@ -9,7 +9,7 @@ import {
 const BookConsultation: FC = () => {
   return (
     <SectionWrapper id="problem-and-opportunity">
-      <div className="h-screen flex flex-col justify-center gap-6 md:gap-12 lg:gap-20">
+      <div className="flex flex-col justify-center gap-6 md:gap-12 lg:gap-20">
         <SectionHeading className="!text-left">
           Ready to Take Your Business to the Next Level?
         </SectionHeading>

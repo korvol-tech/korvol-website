@@ -13,17 +13,17 @@ const AudienceList: FC = () => {
   const services = [
     {
       title: "Established businesses looking to scale.",
-      img: "/assets/img/icon/shop.svg",
+      img: "/assets/img/images/corporation.svg",
       description: "Creating your online store",
     },
     {
       title: "Small businesses transitioning to online sales.",
-      img: "/assets/img/icon/inventory.svg",
+      img: "/assets/img/images/small-store.svg",
       description: "Setting up your inventory",
     },
     {
       title: "Individuals starting their first business online.",
-      img: "/assets/img/icon/payment.svg",
+      img: "/assets/img/images/rocket-2.svg",
       description: "Integrating payment gateway",
       className: "md:col-span-2",
     },

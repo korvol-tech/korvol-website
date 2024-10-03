@@ -22,7 +22,7 @@ const ProblemAndOpportunity: FC = () => {
           </SectionSubheading>
           <div className="flex justify-center">
             <motion.img
-              src="/assets/img/icon/rocket.svg"
+              src="/assets/img/images/limit.svg"
               alt="Rocket"
               className="w-[80%]"
             />

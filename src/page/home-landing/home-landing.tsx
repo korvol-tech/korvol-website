@@ -10,7 +10,7 @@ import { Header } from "./header";
 
 const HomeLanding: FC = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-32">
       <Header />
       <HeroSection />
       <ProblemAndOpportunity />
