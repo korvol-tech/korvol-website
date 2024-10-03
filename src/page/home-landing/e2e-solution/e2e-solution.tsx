@@ -6,7 +6,6 @@ import {
 } from "../components/section";
 import { useInView } from "framer-motion";
 import E2EServices from "./e2e-services";
-import AudienceList from "../audience/audience-list";
 
 const E2ESolution: FC = () => {
   const ref = useRef(null);
@@ -27,7 +26,6 @@ const E2ESolution: FC = () => {
             and we take care of the rest.
           </SectionSubheading>
         </div>
-        <AudienceList />
         <E2EServices />
       </div>
     </SectionWrapper>

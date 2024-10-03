@@ -32,7 +32,7 @@ const AudienceList: FC = () => {
   return (
     <div
       ref={ref}
-      className="min-h-screen grid grid-cols-1 lg:grid-cols-2 items-center text-white space-y-8"
+      className="grid grid-cols-1 lg:grid-cols-2 items-center text-white lg:gap-y-40"
     >
       {isInView
         ? services.map((service, index) => (
