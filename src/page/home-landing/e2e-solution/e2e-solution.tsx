@@ -28,7 +28,7 @@ const E2ESolution: FC = () => {
           </SectionSubheading>
         </div>
         <AudienceList />
-        {/* <E2EServices /> */}
+        <E2EServices />
       </div>
     </SectionWrapper>
   );
