@@ -8,7 +8,7 @@ const Footer: FC = () => {
           <img
             src="/assets/img/logo/logo-dark.png"
             alt="logo"
-            className="w-28"
+            className="w-32 md:w-28"
           />
           <p className="text-sm">
             <em>Your E-commerce Partner</em>
@@ -19,19 +19,14 @@ const Footer: FC = () => {
             Book Your Consultation Now
           </button>
         </div> */}
-        <div className="flex flex-col items:center md:items-start">
-          {/* <a className="text-center md:text-end" href="tel:+919316896458">
-            +91 93168 96458
-          </a> */}
+        <div className="flex flex-col items:center md:items-end gap-2">
           <a
             className="text-center md:text-start"
             href="mailto:contact@korvol.com"
           >
             contact@korvol.com
           </a>
-        </div>
-        <div className="flex flex-col gap-4 items-center md:items-end">
-          <div className="flex justify-end gap-4">
+           <div className="flex justify-center md:justify-end gap-4">
             <img
               src="/assets/img/icon/facebook.svg"
               alt="facebook"
@@ -44,8 +39,6 @@ const Footer: FC = () => {
               className="w-4 h-4"
             />
           </div>
-
-          {/* Copyright */}
         </div>
         <div className="md:col-span-2 flex flex-col gap-2 md:w-full">
           <div className="border-t border-secondary h-1 w-full"></div>

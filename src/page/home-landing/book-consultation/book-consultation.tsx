@@ -19,8 +19,19 @@ const BookConsultation: FC = () => {
             E-Commerce Future
           </SectionSubheading>
           <div className="w-full flex justify-center">
-            <button className="!bg-secondary text-white rounded-md px-4 py-2">
-              Book a Consultation
+            <button className="!bg-secondary text-white rounded-md px-4 py-2 w-fit">
+              <style>
+                {`
+                  #book {
+                    text-decoration: none;
+                    color: inherit;
+                  }
+                  #book:hover {
+                    text-decoration: none;
+                  }
+                `}
+              </style>
+              <a id="book" href="https://calendly.com/nawaaz-korvol/30min" target="_blank">Book a Consultation</a>
             </button>
           </div>
         </div>

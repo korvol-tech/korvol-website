@@ -62,40 +62,41 @@ const E2EServices: FC = () => {
       ref={ref}
       className="min-h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center text-white space-y-8"
     >
-      {isInView
-        ? services.map((service, index) => (
+      {isInView && (
+        <>
+          {services.map((service, index) => (
             <motion.div
-              key={index}
+              key={service.title}
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
               className="flex flex-col items-center space-y-4"
             >
-              {/* <motion.h4 className="text-xl md:text-2xl font-semibold text-center">
-                {service.title}
-              </motion.h4> */}
               {Array.isArray(service.img) ? (
-                <motion.div className="grid grid-cols-2 grid-rows-2 gap-1">
-                  {service.img.map((src, index) => (
-                    <motion.img
-                      key={index}
+                <div className="grid grid-cols-2 grid-rows-2 gap-1">
+                  {service.img.map((src) => (
+                    <img
+                      key={src}
                       src={src}
                       alt={service.title}
                       className="w-10 h-10"
+                      loading="lazy"
                     />
                   ))}
-                </motion.div>
+                </div>
               ) : (
-                <motion.img
+                <img
                   src={service.img}
                   alt={service.title}
-                  className="w-20 "
+                  className="w-20"
+                  loading="lazy"
                 />
               )}
-              <motion.p className="text-white">{service.description}</motion.p>
+              <p className="text-white">{service.description}</p>
             </motion.div>
-          ))
-        : null}
+          ))}
+        </>
+      )}
     </div>
   );
 };
