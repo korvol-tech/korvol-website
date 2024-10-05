@@ -1,6 +1,5 @@
 import { FC, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ColoredText, CTAButton } from "../components";
 import "./hero-section.css";
 
 const HeroSection: FC = () => {

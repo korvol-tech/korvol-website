@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from "react";
+import { FC, useRef } from "react";
 import { HeroSection } from "./hero-section";
 import { ProblemAndOpportunity } from "./problem-and-opportunity";
 import { PowerOfEcommerce } from "./power-of-ecommerce";
