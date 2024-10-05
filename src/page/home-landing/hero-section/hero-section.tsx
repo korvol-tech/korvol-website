@@ -52,9 +52,11 @@ const HeroSection: FC = () => {
           }
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
         >
-          <button className="h-fit bg-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl">
-            Get Started
-          </button>
+          <a href="#problem-and-opportunity">
+            <button className="h-fit bg-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl">
+              Get Started
+            </button>
+          </a>
         </motion.div>
       </div>
     </div>
