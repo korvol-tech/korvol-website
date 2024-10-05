@@ -27,17 +27,23 @@ const Footer: FC = () => {
             contact@korvol.com
           </a>
           <div className="flex justify-center md:justify-end gap-4">
-            <img
-              src="/assets/img/icon/facebook.svg"
-              alt="facebook"
-              className="w-4 h-4"
-            />
-            <img src="/assets/img/icon/x.svg" alt="x" className="w-4 h-4" />
-            <img
-              src="/assets/img/icon/instagram.svg"
-              alt="instagram"
-              className="w-4 h-4"
-            />
+            <a href="https://x.com/" target="_blank">
+              <img src="/assets/img/icon/x.svg" alt="x" className="w-4 h-4" />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <img
+                src="/assets/img/icon/facebook.svg"
+                alt="facebook"
+                className="w-4 h-4"
+              />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img
+                src="/assets/img/icon/instagram.svg"
+                alt="instagram"
+                className="w-4 h-4"
+              />
+            </a>
           </div>
         </div>
         <div className="md:col-span-2 flex flex-col gap-2 md:w-full">

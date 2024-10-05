@@ -9,7 +9,7 @@ const SectionWrapper: FC<SectionWrapperProps> = ({ children, ...rest }) => {
   return (
     <section
       {...rest}
-      className={clsx("container py-12 md:py-24", rest.className)}
+      className={clsx("container py-12 md:py-32", rest.className)}
     >
       {children}
     </section>

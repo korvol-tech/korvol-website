@@ -6,3 +6,18 @@ h3 {
 h4 {
   line-height: 1.4 !important;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* This CSS code creates a smooth scrolling effect for the page */
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+.smooth-scroll > * {
+  scroll-snap-align: start; /* Aligns each child element to the start of the snap container */
+  scroll-behavior: smooth;
+}

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 import { HeroSection } from "./hero-section";
 import { ProblemAndOpportunity } from "./problem-and-opportunity";
 import { PowerOfEcommerce } from "./power-of-ecommerce";
@@ -10,16 +10,20 @@ import { Header } from "./header";
 import "./home-landing.css";
 
 const HomeLanding: FC = () => {
+  const sectionsRef = useRef<HTMLDivElement>(null);
+
   return (
     <div className="flex flex-col">
       <Header />
-      <HeroSection />
-      <ProblemAndOpportunity />
-      <PowerOfEcommerce />
-      <E2ESolution />
-      <Audience />
-      <BookConsultation />
-      <Footer />
+      <div ref={sectionsRef} className="smooth-scroll">
+        <HeroSection />
+        <ProblemAndOpportunity />
+        <PowerOfEcommerce />
+        <E2ESolution />
+        <Audience />
+        <BookConsultation />
+        <Footer />
+      </div>
     </div>
   );
 };

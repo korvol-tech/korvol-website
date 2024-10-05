@@ -60,7 +60,7 @@ const E2EServices: FC = () => {
   return (
     <div
       ref={ref}
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center text-white gap-y-7 gap-x-4"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  items-center text-white gap-y-7 gap-x-4"
     >
       {isInView && (
         <>
@@ -94,7 +94,9 @@ const E2EServices: FC = () => {
                   />
                 </motion.div>
               )}
-              <p className="text-white">{service.description}</p>
+              <p className="text-white text-lg font-semibold">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </>

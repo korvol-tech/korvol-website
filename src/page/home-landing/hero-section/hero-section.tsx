@@ -1,37 +1,62 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { ColoredText, CTAButton } from "../components";
 import "./hero-section.css";
 
 const HeroSection: FC = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { amount: 0.5, once: true });
+
   return (
     <div id="hero-section" className="h-screen">
-      <div className="container flex flex-col gap-12 items-center justify-center h-full">
-        <h1 className="flex flex-col gap-4 text-4xl md:text-5xl lg:text-6xl font-bold text-center">
-          Skyrocket Your Business with
-          <div className="flex justify-center">
-            <img
-              src="/assets/img/logo/logo-dark.png"
-              alt="logo"
-              className="w-[240px] md:w-[360px]"
-            />
-          </div>
-          {/* <ColoredText
-          color="primary"
-          className="text-5xl md:text-7xl font-extrabold"
+      <div
+        ref={sectionRef}
+        className="container flex flex-col gap-12 items-center justify-center h-full"
+      >
+        <motion.div
+          className="flex flex-col gap-4 text-4xl md:text-5xl lg:text-6xl font-bold text-center"
+          initial={{ y: -100, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          Korvol
-        </ColoredText> */}
-        </h1>
-        <h3 className="flex flex-col gap-2 text-xl md:text-2xl lg:text-3xl text-center">
-          <span>Take your business from local to national or even global.</span>{" "}
-          <span>Expand your reach with our complete e-commerce solution.</span>
-        </h3>
+          <h1>
+            Skyrocket Your Business with
+            <div className="flex justify-center">
+              <img
+                src="/assets/img/logo/logo-dark.png"
+                alt="logo"
+                className="w-[240px] md:w-[360px]"
+              />
+            </div>
+          </h1>
+        </motion.div>
+        <motion.div
+          className="flex flex-col gap-2 text-xl md:text-2xl lg:text-3xl text-center"
+          initial={{ y: 100, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
+          <h3>
+            <span>
+              Take your business from local to national or even global.
+            </span>{" "}
+            <span>
+              Expand your reach with our complete e-commerce solution.
+            </span>
+          </h3>
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={
+            isInView ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }
+          }
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+        >
           <button className="h-fit bg-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl">
             Get Started
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
