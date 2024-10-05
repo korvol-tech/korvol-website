@@ -6,7 +6,6 @@ import {
 } from "../components/section";
 import { useInView } from "framer-motion";
 import AudienceList from "./audience-list";
-// import E2EServices from "./e2e-services";
 
 const Audience: FC = () => {
   const ref = useRef(null);
@@ -20,15 +19,14 @@ const Audience: FC = () => {
         <SectionHeading className="!text-left">
           Is Korvol Right for You?
         </SectionHeading>
-        <div className="grid grid-rows-1 md:grid-rows-1 grid-cols-1  gap-4">
+        <div className="grid grid-rows-1 md:grid-rows-1 grid-cols-1 gap-12">
           <SectionSubheading className="!text-left md:flex md:justify-center">
             Whether you&apos;re a well-established business, a startup, or an
             individual with a vision, Korvol provides the tools to take your
             business online—no prior experience required.
           </SectionSubheading>
+          <AudienceList />
         </div>
-        <AudienceList />
-        {/* <E2EServices /> */}
       </div>
     </SectionWrapper>
   );

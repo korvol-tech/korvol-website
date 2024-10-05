@@ -12,27 +12,31 @@ const AudienceList: FC = () => {
 
   const services = [
     {
-      title: "Established businesses looking to scale.",
+      title: "Established businesses looking to scale",
       img: "/assets/img/images/corporation.svg",
-      description: "Creating your online store",
+      description:
+        "For companies with a solid foundation seeking to expand their reach and increase revenue",
     },
     {
-      title: "Small businesses transitioning to online sales.",
+      title: "Small businesses transitioning to online sales",
       img: "/assets/img/images/small-store.svg",
-      description: "Setting up your inventory",
+      description:
+        "For local shops and traditional businesses ready to expand their customer base",
     },
     {
-      title: "Individuals starting their first business online.",
+      title: "Individuals starting their first business online",
       img: "/assets/img/images/rocket-2.svg",
-      description: "Integrating payment gateway",
-      className: "md:col-span-2",
+      description:
+        "For aspiring entrepreneurs and innovators ready to launch their first online venture",
+      className:
+        "md:col-span-2 md:justify-self-center md:max-w-[calc(100%-2rem)]",
     },
   ];
 
   return (
     <div
       ref={ref}
-      className="grid grid-cols-1 lg:grid-cols-2 items-center text-white lg:gap-y-40"
+      className="grid grid-cols-1 md:grid-cols-2 items-center text-white gap-16 md:gap-20"
     >
       {isInView
         ? services.map((service, index) => (
@@ -46,9 +50,6 @@ const AudienceList: FC = () => {
                 service.className
               )}
             >
-              {/* <motion.h4 className="text-xl md:text-2xl font-semibold text-center">
-                {service.title}
-              </motion.h4> */}
               {Array.isArray(service.img) ? (
                 <motion.div className="grid grid-cols-2 grid-rows-2 gap-1">
                   {service.img.map((src, index) => (
@@ -61,17 +62,19 @@ const AudienceList: FC = () => {
                   ))}
                 </motion.div>
               ) : (
-                <motion.img
-                  src={service.img}
-                  alt={service.title}
-                  className="w-20 "
-                />
+                <motion.div className="md:min-h-[150px] flex justify-center items-end">
+                  <motion.img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-20 "
+                  />
+                </motion.div>
               )}
-              <div className="flex flex-col items-center">
-                <motion.p className="text-white font-semibold">
+              <div className="flex flex-col text-left md:text-center">
+                <motion.p className="text-white font-semibold text-xl md:text-2xl mb-2 ">
                   {service.title}
                 </motion.p>
-                <motion.p className="text-white">
+                <motion.p className="text-white text-lg">
                   {service.description}
                 </motion.p>
               </div>

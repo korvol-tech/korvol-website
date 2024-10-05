@@ -60,7 +60,7 @@ const E2EServices: FC = () => {
   return (
     <div
       ref={ref}
-      className="min-h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center text-white space-y-8"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center text-white gap-y-7 gap-x-4"
     >
       {isInView && (
         <>
@@ -69,11 +69,11 @@ const E2EServices: FC = () => {
               key={service.title}
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
-              className="flex flex-col items-center space-y-4"
+              transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+              className="flex flex-col items-center gap-4"
             >
               {Array.isArray(service.img) ? (
-                <div className="grid grid-cols-2 grid-rows-2 gap-1">
+                <div className="grid grid-cols-2 grid-rows-2 gap-1 md:min-h-[80px]">
                   {service.img.map((src) => (
                     <img
                       key={src}
@@ -85,12 +85,14 @@ const E2EServices: FC = () => {
                   ))}
                 </div>
               ) : (
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="w-20"
-                  loading="lazy"
-                />
+                <motion.div className="md:min-h-[80px] flex justify-center items-end">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-20"
+                    loading="lazy"
+                  />
+                </motion.div>
               )}
               <p className="text-white">{service.description}</p>
             </motion.div>

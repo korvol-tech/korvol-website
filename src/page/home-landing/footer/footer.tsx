@@ -2,8 +2,8 @@ import { FC } from "react";
 
 const Footer: FC = () => {
   return (
-    <footer className="container py-8 border-t border-secondary">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <footer className=" py-8 border-t border-gray-700">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex flex-col gap-2 items-center md:items-start">
           <img
             src="/assets/img/logo/logo-dark.png"
@@ -26,7 +26,7 @@ const Footer: FC = () => {
           >
             contact@korvol.com
           </a>
-           <div className="flex justify-center md:justify-end gap-4">
+          <div className="flex justify-center md:justify-end gap-4">
             <img
               src="/assets/img/icon/facebook.svg"
               alt="facebook"
@@ -41,8 +41,7 @@ const Footer: FC = () => {
           </div>
         </div>
         <div className="md:col-span-2 flex flex-col gap-2 md:w-full">
-          <div className="border-t border-secondary h-1 w-full"></div>
-          <p className="text-sm text-center md:text-end">
+          <p className="text-sm text-center ">
             &copy; {new Date().getFullYear()} Korvol. All rights reserved.
           </p>
         </div>

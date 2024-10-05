@@ -7,10 +7,11 @@ import { Footer } from "./footer";
 import { Audience } from "./audience";
 import { BookConsultation } from "./book-consultation";
 import { Header } from "./header";
+import "./home-landing.css";
 
 const HomeLanding: FC = () => {
   return (
-    <div className="flex flex-col gap-32">
+    <div className="flex flex-col">
       <Header />
       <HeroSection />
       <ProblemAndOpportunity />
