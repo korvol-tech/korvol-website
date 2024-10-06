@@ -18,7 +18,7 @@ const HeroSection: FC = () => {
           animate={isInView ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1>
+          <h1 className="flex flex-col gap-4">
             Skyrocket Your Business with
             <div className="flex justify-center">
               <img

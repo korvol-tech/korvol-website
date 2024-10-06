@@ -27,7 +27,8 @@ const PowerOfEcommerce: FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <SectionHeading className="!text-left">
-            Reach Thousands of New Customers with E-Commerce
+            Reach Thousands of New Customers with{" "}
+            <span className="block md:inline"> E-Commerce </span>
           </SectionHeading>
         </motion.div>
         <div className="flex flex-col gap-16 md:gap-20">
@@ -67,7 +68,7 @@ const PowerOfEcommerce: FC = () => {
             className="grid grid-rows-1 md:grid-rows-1 grid-cols-1 md:grid-cols-2 gap-8 items-center"
           >
             <motion.div
-              className="lg:order-2"
+              className="md:order-2"
               initial={{ x: -50, opacity: 0 }}
               animate={
                 isBlock2InView ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }

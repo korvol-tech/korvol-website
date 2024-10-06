@@ -1,10 +1,25 @@
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 
 const Header: FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
-      className={`w-full flex items-center px-2 md:px-8 h-16 fixed top-0 z-50 transition-colors duration-300"bg-black" 
-      `}
+      className={`w-full flex items-center px-2 md:px-8 h-12 md:h-16 fixed top-0 z-50 transition-colors duration-300 ${
+        isScrolled ? "bg-black" : "bg-transparent"
+      }`}
     >
       <a href="#hero-section">
         <img
