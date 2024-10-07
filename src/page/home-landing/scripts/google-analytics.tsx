@@ -5,14 +5,16 @@ const GoogleAnalytics: FC = () => {
     <>
       <script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-E8GH103CF1"
+        src="https://www.googletagmanager.com/gtag/js?id=G-KJ44Y3BREF"
       ></script>
       <script>
-        {`window.dataLayer = window.dataLayer || [];
+        {`
+  window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-E8GH103CF1');`}
+  gtag('config', 'G-KJ44Y3BREF');
+        `}
       </script>
     </>
   );

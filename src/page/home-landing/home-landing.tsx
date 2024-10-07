@@ -8,7 +8,6 @@ import { Audience } from "./audience";
 import { BookConsultation } from "./book-consultation";
 import { Header } from "./header";
 import "./home-landing.css";
-import GoogleAnalytics from "./scripts/google-analytics";
 
 const HomeLanding: FC = () => {
   const sectionsRef = useRef<HTMLDivElement>(null);
@@ -25,7 +24,6 @@ const HomeLanding: FC = () => {
         <BookConsultation />
         <Footer />
       </div>
-      <GoogleAnalytics />
     </div>
   );
 };
