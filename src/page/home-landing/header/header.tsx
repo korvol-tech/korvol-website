@@ -1,4 +1,5 @@
 import { FC, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,13 +22,64 @@ const Header: FC = () => {
         isScrolled ? "bg-black" : "bg-transparent"
       }`}
     >
-      <a href="#hero-section">
-        <img
-          src="/assets/img/logo/logo-dark.png"
-          alt="logo"
-          className="w-40 md:w-48"
-        />
-      </a>
+      <div className="flex justify-between items-center w-full">
+        <a href="#hero-section">
+          <img
+            src="/assets/img/logo/logo-dark.png"
+            alt="logo"
+            className="w-40 md:w-48"
+          />
+        </a>
+        <div className="flex items-center gap-4">
+          <motion.button
+            className="bg-primary text-white rounded-md p-2 font-bold"
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+          >
+            <style>
+              {`
+                  #book {
+                    text-decoration: none;
+                    color: inherit;
+                  }
+                  #book:hover {
+                    text-decoration: none;
+                  }
+                `}
+            </style>
+            <a
+              id="book"
+              href="https://calendly.com/nawaaz-korvol/30min"
+              target="_blank"
+            >
+              Book a Consultation Now
+            </a>
+          </motion.button>
+
+          <motion.button
+            className="border border-solid border-primary text-white rounded-md p-2 font-bold"
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+          >
+            <style>
+              {`
+                  #book {
+                    text-decoration: none;
+                    color: inherit;
+                  }
+                  #book:hover {
+                    text-decoration: none;
+                  }
+                `}
+            </style>
+            <a id="call" href="tel:+9316896458">
+              Call Us Now
+            </a>
+          </motion.button>
+        </div>
+      </div>
     </header>
   );
 };

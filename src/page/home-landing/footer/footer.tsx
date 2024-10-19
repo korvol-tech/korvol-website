@@ -27,17 +27,17 @@ const Footer: FC = () => {
             contact@korvol.com
           </a>
           <div className="flex justify-center md:justify-end gap-4">
-            <a href="https://x.com/" target="_blank">
+            <a href="https://x.com/korvolorg" target="_blank">
               <img src="/assets/img/icon/x.svg" alt="x" className="w-4 h-4" />
             </a>
-            <a href="https://www.facebook.com/" target="_blank">
+            <a href="https://www.facebook.com/korvolorg/" target="_blank">
               <img
                 src="/assets/img/icon/facebook.svg"
                 alt="facebook"
                 className="w-4 h-4"
               />
             </a>
-            <a href="https://www.instagram.com/" target="_blank">
+            <a href="https://www.instagram.com/korvol_org/" target="_blank">
               <img
                 src="/assets/img/icon/instagram.svg"
                 alt="instagram"

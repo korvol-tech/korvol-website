@@ -36,7 +36,7 @@ const BookConsultation: FC = () => {
               E-Commerce Future
             </SectionSubheading>
           </motion.div>
-          <div className="w-full flex justify-center">
+          <div className="w-full flex flex-col md:flex-row justify-center items-center gap-8">
             <motion.button
               className="h-fit bg-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl"
               initial={{ scale: 0.5, opacity: 0 }}
@@ -62,6 +62,29 @@ const BookConsultation: FC = () => {
                 target="_blank"
               >
                 Book a Consultation Now
+              </a>
+            </motion.button>
+            <motion.button
+              className="h-fit border border-solid border-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={
+                isInView ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }
+              }
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+            >
+              <style>
+                {`
+                  #book {
+                    text-decoration: none;
+                    color: inherit;
+                  }
+                  #book:hover {
+                    text-decoration: none;
+                  }
+                `}
+              </style>
+              <a id="call" href="tel:+9316896458">
+                Call Us Now
               </a>
             </motion.button>
           </div>
