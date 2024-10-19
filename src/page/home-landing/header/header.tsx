@@ -30,7 +30,7 @@ const Header: FC = () => {
             className="w-40 md:w-48"
           />
         </a>
-        <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <motion.button
             className="bg-primary text-white rounded-md p-2 font-bold"
             initial={{ scale: 0.5, opacity: 0 }}
