@@ -17,7 +17,7 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '223274885885148');
+fbq('init', '1098563008667564');
 fbq('track', 'PageView');
         `}
       </script>
@@ -28,7 +28,7 @@ fbq('track', 'PageView');
           style={{
             display: "none",
           }}
-          src="https://www.facebook.com/tr?id=223274885885148&ev=PageView&noscript=1"
+          src="https://www.facebook.com/tr?id=1098563008667564&ev=PageView&noscript=1"
         />
       </noscript>
     </>
