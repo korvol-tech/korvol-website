@@ -1,8 +1,12 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect, MouseEventHandler } from "react";
 import { motion } from "framer-motion";
 
 const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const triggerAnchorOnClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.currentTarget.querySelector("a")?.click();
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +40,7 @@ const Header: FC = () => {
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+            onClick={triggerAnchorOnClick}
           >
             <style>
               {`
@@ -56,12 +61,12 @@ const Header: FC = () => {
               Book a Consultation Now
             </a>
           </motion.button>
-
           <motion.button
-            className="border border-solid border-primary text-white rounded-md p-2 font-bold"
+            className="bg-secondary text-white rounded-md p-2 font-bold"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+            onClick={triggerAnchorOnClick}
           >
             <style>
               {`
@@ -76,6 +81,33 @@ const Header: FC = () => {
             </style>
             <a id="call" href="tel:+9316896458">
               Call Us Now
+            </a>
+          </motion.button>
+
+          <motion.button
+            className="border border-solid border-primary text-white rounded-md p-2 font-bold"
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+            onClick={triggerAnchorOnClick}
+          >
+            <style>
+              {`
+                  #book {
+                    text-decoration: none;
+                    color: inherit;
+                  }
+                  #book:hover {
+                    text-decoration: none;
+                  }
+                `}
+            </style>
+            <a
+              id="call"
+              href="https://wa.me/message/YQ45OANXCSWSB1"
+              target="_blank"
+            >
+              Message us
             </a>
           </motion.button>
         </div>

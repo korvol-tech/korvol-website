@@ -1,4 +1,4 @@
-import { FC, useRef } from "react";
+import { FC, MouseEventHandler, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   SectionHeading,
@@ -11,6 +11,10 @@ import Image from "next/image";
 const BookConsultation: FC = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { amount: 0.5, once: true });
+
+  const triggerAnchorOnClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.currentTarget.querySelector("a")?.click();
+  };
 
   return (
     <SectionWrapper id="book-consultation">
@@ -41,7 +45,7 @@ const BookConsultation: FC = () => {
           <div className="w-full flex flex-col">
             <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-8">
               <motion.button
-                className="h-fit bg-primary text-white rounded-md px-4 py-4 w-full  font-bold text-xl"
+                className="h-fit bg-primary text-white rounded-md px-4 py-4 w-full font-bold text-lg lg:text-xl"
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={
                   isInView
@@ -49,6 +53,7 @@ const BookConsultation: FC = () => {
                     : { scale: 0.5, opacity: 0 }
                 }
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+                onClick={triggerAnchorOnClick}
               >
                 <style>
                   {`
@@ -80,7 +85,7 @@ const BookConsultation: FC = () => {
                 </div>
               </motion.button>
               <motion.button
-                className="h-fit bg-secondary text-white rounded-md px-4 py-4 w-full  font-bold text-xl"
+                className="h-fit bg-secondary text-white rounded-md px-4 py-4 w-full font-bold text-lg lg:text-xl"
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={
                   isInView
@@ -88,6 +93,7 @@ const BookConsultation: FC = () => {
                     : { scale: 0.5, opacity: 0 }
                 }
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+                onClick={triggerAnchorOnClick}
               >
                 <style>
                   {`
@@ -114,7 +120,7 @@ const BookConsultation: FC = () => {
                 </div>
               </motion.button>
               <motion.button
-                className="h-fit border border-solid border-primary text-white rounded-md px-4 py-4 w-full  font-bold text-xl"
+                className="h-fit border border-solid border-primary text-white rounded-md px-4 py-4 w-full font-bold text-lg lg:text-xl"
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={
                   isInView
@@ -122,6 +128,7 @@ const BookConsultation: FC = () => {
                     : { scale: 0.5, opacity: 0 }
                 }
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+                onClick={triggerAnchorOnClick}
               >
                 <style>
                   {`

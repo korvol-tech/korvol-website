@@ -150,7 +150,7 @@ const ContactUsForm: FC = () => {
         <div className="flex gap-4 items-center">
           <button
             className={clsx(
-              "rounded-md px-12 py-2 w-full md:w-fit !text-white !bg-secondary font-bold text-md",
+              "rounded-md px-4 py-4 w-full lg:w-[200px] !text-white !bg-secondary font-bold text-lg lg:text-xl",
               isSubmitting && "bg-gray-500"
             )}
             disabled={isSubmitting}
