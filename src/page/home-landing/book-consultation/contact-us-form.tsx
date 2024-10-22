@@ -82,6 +82,7 @@ const ContactUsForm: FC = () => {
       .then((response) => response.json())
       .then(() => {
         setSubmitted(true);
+        form.reset();
       })
       .catch((error) => {
         console.error(error);

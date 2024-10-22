@@ -6,6 +6,7 @@ import {
   SectionWrapper,
 } from "../components/section";
 import ContactUsForm from "./contact-us-form";
+import Image from "next/image";
 
 const BookConsultation: FC = () => {
   const sectionRef = useRef(null);
@@ -40,7 +41,7 @@ const BookConsultation: FC = () => {
           <div className="w-full flex flex-col">
             <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-8">
               <motion.button
-                className="h-fit bg-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl"
+                className="h-fit bg-primary text-white rounded-md px-4 py-4 w-full  font-bold text-xl"
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={
                   isInView
@@ -60,16 +61,26 @@ const BookConsultation: FC = () => {
                   }
                 `}
                 </style>
-                <a
-                  id="book"
-                  href="https://calendly.com/nawaaz-korvol/30min"
-                  target="_blank"
-                >
-                  Book a Consultation Now
-                </a>
+                <div className="inline-flex justify-center items-center gap-4">
+                  <Image
+                    src="/assets/img/icon/schedule.svg"
+                    alt="schedule"
+                    height={20}
+                    width={20}
+                    className="!h-[20px] !w-[20px]"
+                  />
+
+                  <a
+                    id="book"
+                    href="https://calendly.com/nawaaz-korvol/30min"
+                    target="_blank"
+                  >
+                    Book a Consultation
+                  </a>
+                </div>
               </motion.button>
               <motion.button
-                className="h-fit border border-solid border-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl"
+                className="h-fit bg-secondary text-white rounded-md px-4 py-4 w-full  font-bold text-xl"
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={
                   isInView
@@ -89,12 +100,21 @@ const BookConsultation: FC = () => {
                   }
                 `}
                 </style>
-                <a id="call" href="tel:+9316896458">
-                  Call Us Now
-                </a>
+                <div className="inline-flex justify-center items-center gap-4">
+                  <Image
+                    src="/assets/img/icon/call.svg"
+                    alt="schedule"
+                    height={20}
+                    width={20}
+                    className="!h-[20px] !w-[20px]"
+                  />
+                  <a id="call" href="tel:+9316896458">
+                    Call Us Now
+                  </a>
+                </div>
               </motion.button>
               <motion.button
-                className="h-fit border border-solid border-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl"
+                className="h-fit border border-solid border-primary text-white rounded-md px-4 py-4 w-full  font-bold text-xl"
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={
                   isInView
@@ -114,13 +134,22 @@ const BookConsultation: FC = () => {
                   }
                 `}
                 </style>
-                <a
-                  id="call"
-                  href="https://wa.me/message/YQ45OANXCSWSB1"
-                  target="_blank"
-                >
-                  Message us on WhatsApp
-                </a>
+                <div className="inline-flex justify-center items-center gap-4">
+                  <Image
+                    src="/assets/img/icon/whatsapp.svg"
+                    alt="schedule"
+                    height={20}
+                    width={20}
+                    className="!h-[20px] !w-[20px]"
+                  />
+                  <a
+                    id="call"
+                    href="https://wa.me/message/YQ45OANXCSWSB1"
+                    target="_blank"
+                  >
+                    Message us
+                  </a>
+                </div>
               </motion.button>
             </div>
             <div className="flex flex-col relative items-center my-12">
