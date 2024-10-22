@@ -5,6 +5,7 @@ import {
   SectionSubheading,
   SectionWrapper,
 } from "../components/section";
+import ContactUsForm from "./contact-us-form";
 
 const BookConsultation: FC = () => {
   const sectionRef = useRef(null);
@@ -36,44 +37,20 @@ const BookConsultation: FC = () => {
               E-Commerce Future
             </SectionSubheading>
           </motion.div>
-          <div className="w-full flex flex-col md:flex-row justify-center items-center gap-8">
-            <motion.button
-              className="h-fit bg-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={
-                isInView ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }
-              }
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-            >
-              <style>
-                {`
-                  #book {
-                    text-decoration: none;
-                    color: inherit;
-                  }
-                  #book:hover {
-                    text-decoration: none;
-                  }
-                `}
-              </style>
-              <a
-                id="book"
-                href="https://calendly.com/nawaaz-korvol/30min"
-                target="_blank"
+          <div className="w-full flex flex-col">
+            <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-8">
+              <motion.button
+                className="h-fit bg-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl"
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={
+                  isInView
+                    ? { scale: 1, opacity: 1 }
+                    : { scale: 0.5, opacity: 0 }
+                }
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
               >
-                Book a Consultation Now
-              </a>
-            </motion.button>
-            <motion.button
-              className="h-fit border border-solid border-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={
-                isInView ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }
-              }
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-            >
-              <style>
-                {`
+                <style>
+                  {`
                   #book {
                     text-decoration: none;
                     color: inherit;
@@ -82,11 +59,92 @@ const BookConsultation: FC = () => {
                     text-decoration: none;
                   }
                 `}
-              </style>
-              <a id="call" href="tel:+9316896458">
-                Call Us Now
-              </a>
-            </motion.button>
+                </style>
+                <a
+                  id="book"
+                  href="https://calendly.com/nawaaz-korvol/30min"
+                  target="_blank"
+                >
+                  Book a Consultation Now
+                </a>
+              </motion.button>
+              <motion.button
+                className="h-fit border border-solid border-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl"
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={
+                  isInView
+                    ? { scale: 1, opacity: 1 }
+                    : { scale: 0.5, opacity: 0 }
+                }
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+              >
+                <style>
+                  {`
+                  #book {
+                    text-decoration: none;
+                    color: inherit;
+                  }
+                  #book:hover {
+                    text-decoration: none;
+                  }
+                `}
+                </style>
+                <a id="call" href="tel:+9316896458">
+                  Call Us Now
+                </a>
+              </motion.button>
+              <motion.button
+                className="h-fit border border-solid border-primary text-white rounded-md px-12 py-4 w-full md:w-fit font-bold text-xl"
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={
+                  isInView
+                    ? { scale: 1, opacity: 1 }
+                    : { scale: 0.5, opacity: 0 }
+                }
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+              >
+                <style>
+                  {`
+                  #book {
+                    text-decoration: none;
+                    color: inherit;
+                  }
+                  #book:hover {
+                    text-decoration: none;
+                  }
+                `}
+                </style>
+                <a
+                  id="call"
+                  href="https://wa.me/message/YQ45OANXCSWSB1"
+                  target="_blank"
+                >
+                  Message us on WhatsApp
+                </a>
+              </motion.button>
+            </div>
+            <div className="flex flex-col relative items-center my-12">
+              <p className="text-center px-2 bg-black z-10 font-bold">Or</p>
+              <div
+                id="line"
+                className="h-[1px] w-full bg-gray-300 transform -translate-y-[14px]"
+              ></div>
+            </div>
+            <div className="flex flex-col gap-4">
+              <p className="font-semibold">
+                Fill out the form below and we&apos;ll get back to you as soon
+                as possible.
+              </p>
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                animate={
+                  isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }
+                }
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              >
+                <ContactUsForm />
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
