@@ -7,7 +7,7 @@ import MetaPixel from "@/page/home-landing/scripts/meta-pixel";
 export default function Home() {
   return (
     <>
-      <HomeLanding />;
+      <HomeLanding />
       <GoogleAnalytics />
       <MetaPixel />
     </>

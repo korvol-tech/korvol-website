@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const BookConsultation: FC = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { amount: 0.5, once: true });
+  const isInView = useInView(sectionRef, { amount: 0.2, once: true });
 
   const triggerAnchorOnClick: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.currentTarget.querySelector("a")?.click();

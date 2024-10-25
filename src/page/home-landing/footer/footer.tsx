@@ -48,9 +48,12 @@ const Footer: FC = () => {
                 className="w-4 h-4"
               />
             </a>
-            <a href="https://x.com/korvolorg" target="_blank">
+            <a
+              href="https://www.linkedin.com/company/korvol-org/"
+              target="_blank"
+            >
               <img
-                src="/assets/img/icon/youtube.svg"
+                src="/assets/img/icon/linkedin.svg"
                 alt="x"
                 className="w-4 h-4"
               />
