@@ -1,9 +1,8 @@
 #hero-section {
-  background-image: url("/assets/img/images/e-commerce.svg");
+  background-image: url("/assets/img/images/newBG.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
 
   background-color: rgba(27, 22, 22, 0.7);
-  background-blend-mode: overlay;
 }
