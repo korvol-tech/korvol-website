@@ -1,12 +1,7 @@
-import { FC, useState, useEffect, MouseEventHandler } from "react";
-import { motion } from "framer-motion";
+import { FC, useState, useEffect } from "react";
 
 const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const triggerAnchorOnClick: MouseEventHandler<HTMLButtonElement> = (e) => {
-    e.currentTarget.querySelector("a")?.click();
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,8 +29,9 @@ const Header: FC = () => {
             className="w-40 md:w-48"
           />
         </a>
+        {/* Desktop */}
         <div className="hidden md:flex items-center gap-4">
-          <motion.button
+          {/* <motion.button
             className="bg-primary text-white rounded-md p-2 font-bold"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -60,57 +56,15 @@ const Header: FC = () => {
             >
               Book a Consultation Now
             </a>
-          </motion.button>
-          <motion.button
-            className="bg-secondary text-white rounded-md p-2 font-bold"
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-            onClick={triggerAnchorOnClick}
-          >
-            <style>
-              {`
-                  #book {
-                    text-decoration: none;
-                    color: inherit;
-                  }
-                  #book:hover {
-                    text-decoration: none;
-                  }
-                `}
-            </style>
-            <a id="call" href="tel:+9316896458">
-              Call Us Now
-            </a>
-          </motion.button>
-
-          <motion.button
-            className="border border-solid border-primary text-white rounded-md p-2 font-bold"
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-            onClick={triggerAnchorOnClick}
-          >
-            <style>
-              {`
-                  #book {
-                    text-decoration: none;
-                    color: inherit;
-                  }
-                  #book:hover {
-                    text-decoration: none;
-                  }
-                `}
-            </style>
-            <a
-              id="call"
-              href="https://wa.me/message/YQ45OANXCSWSB1"
-              target="_blank"
-            >
-              Message us
-            </a>
-          </motion.button>
+          </motion.button> */}
         </div>
+        {/* Mobile */}
+        <div className="md:hidden">
+          <button>
+            <img src="/assets/img/icons/menu.svg" alt="menu" />
+          </button>
+        </div>
+        <div className="md:hidden"></div>
       </div>
     </header>
   );
