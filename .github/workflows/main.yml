@@ -22,7 +22,7 @@ jobs:
 
       - name: 📂 Deploy & Restart App on Droplet
         run: |
-          ssh -i ~/.ssh/id_rsa prod@${{ secrets.DROPLET_IP }} << 'EOF'
+          ssh -i ~/.ssh/id_rsa prod@${{ secrets.DO_DROPLET_IP }} << 'EOF'
             cd /var/www/${{ secrets.DO_APP_NAME }}
             git pull origin main
             npm install
