@@ -3,7 +3,7 @@ name: 🚀 Deploy to DigitalOcean & Restart PM2
 on:
   push:
     branches:
-      - main  # Change if needed
+      - master  # Change if needed
 
 jobs:
   deploy:
