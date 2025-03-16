@@ -8,6 +8,13 @@ export type RedirectorProps = PropsWithChildren<{
   destination: string;
 }>;
 
+/**
+ * A components that compares the current pathname with a list of sources and
+ * redirects to a destination if the current pathname matches any of the sources.
+ * @param param0
+ * @returns
+ */
+
 const Redirector: FC<RedirectorProps> = ({
   children,
   sources,
@@ -18,7 +25,10 @@ const Redirector: FC<RedirectorProps> = ({
 
   useEffect(() => {
     if (
+      // Ignore if the current pathname is the same as the destination
       pathname !== destination &&
+      // Redirect if the current pathname matches any of the sources or if the
+      // sources array contains a wildcard "*"
       (sources.includes(pathname) || sources.includes("*"))
     ) {
       redirect(destination, RedirectType.replace);

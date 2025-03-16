@@ -1,0 +1,27 @@
+:root {
+  --color-primary-100: #a3b4ff;
+  --color-primary-300: #6c81f5;
+  --color-primary-500: #3f5af3;
+  --color-primary-700: #2d46d3;
+  --color-primary-900: #1c2ea5;
+  --color-secondary-100: #ffe08a;
+  --color-secondary-300: #ffd15a;
+  --color-secondary-500: #fbaf00;
+  --color-secondary-700: #b87900;
+  --color-secondadry-900: #8a5100;
+  --color-neutral-100: #e5e7eb;
+  --color-neutral-300: #6b7280;
+  --color-neutral-500: #333d4b;
+  --color-neutral-700: #111827;
+  --color-neutral-900: #02050a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a3a3a3;
+  --color-text-tertiary: #6b7280;
+  --color-status-success: #1db954;
+  --color-status-error: #dc3545;
+  --color-status-warning: #ffc107;
+  --color-status-info: #17a2b8;
+  --color-gradient-primary: linear-gradient(180deg, #2b43d9 0%, #728df8 100%);
+  --color-gradient-secondary: linear-gradient(180deg, #d88a00 0%, #ffd980 100%);
+  --color-gradient-darkUi: linear-gradient(180deg, #02050a 0%, #4a5b84 100%);
+}
