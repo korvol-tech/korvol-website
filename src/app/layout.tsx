@@ -11,14 +11,6 @@ export const metadata: Metadata = {
   description: aboutUs.content,
 };
 
-// const roboto = localFont({
-//   src: "/fonts/Roboto.ttf",
-//   variable: "--font-roboto",
-//   weight: "100 200 300 400 500 600 700 800 900",
-//   style: "normal",
-//   display: "swap",
-// });
-
 export default function RootLayout({
   children,
 }: Readonly<{
