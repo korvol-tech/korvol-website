@@ -93,8 +93,10 @@ export function Footer() {
           <p className="text-korvol-text-tertiary text-sm">
             &copy; {currentYear} {company.name}. All rights reserved.
           </p>
-          <p className="text-korvol-text-tertiary text-sm">
-            {company.tagline}
+          <p className="text-sm font-medium">
+            <span className="bg-gradient-to-r from-white to-korvol-text-secondary bg-clip-text text-transparent">Automate.</span>{' '}
+            <span className="bg-gradient-to-r from-korvol-blue to-korvol-blue-light bg-clip-text text-transparent">Scale.</span>{' '}
+            <span className="bg-gradient-to-r from-korvol-yellow to-korvol-yellow-light bg-clip-text text-transparent">Succeed.</span>
           </p>
         </div>
       </div>
